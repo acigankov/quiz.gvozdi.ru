@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+
+# Prevent Directoy listing
+
+Options -Indexes
+
+Deny from all

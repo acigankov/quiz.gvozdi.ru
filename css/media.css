@@ -1,0 +1,167 @@
+/*xs extra small*/
+@media (min-width: 1px)  {
+    .section-title {
+        min-height: 100px;
+    }
+    
+    /*xs header start*/
+    
+    .top-heading__desc {
+        padding-top: 0;
+    }
+    
+    .top-heading__wrapper {
+        min-height: 400px;
+    }
+
+    
+    a.top-heading__btn, 
+    a.top-heading__btn:focus {
+        font-size: 1.2rem;
+    }
+    /*xs header end*/
+    
+    .testimonial-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-item__img {
+        margin-bottom: 1.5rem;
+    }
+    
+    
+    .advantage-item {
+        flex-direction: column;
+    }
+    
+    .advantage-item__badge {
+        margin:0;
+    }
+    
+    .advantage-item__text {
+    font-size: 1rem;
+    padding: .9rem;
+    text-align: center;
+    }
+    
+    .where__content {
+        padding: 2rem;
+    }
+    
+    /*xs footer start*/
+    
+
+    /*xs footer end*/
+    
+}    
+/*sm small*/
+@media (min-width: 576px)  {
+    
+}
+
+/*md medium*/
+@media (min-width: 768px)  {
+    
+s    
+    .timetable-item__btn {
+        padding: 0.4rem 1rem;
+        font-size: .85rem;
+    }
+
+    .advantage-item {
+        flex-direction: row;
+    }
+
+    .team-item {
+        padding: 2rem;
+    }
+    .team-item__name {
+        font-family: 'Montserrat-Bold' , sans-serif;
+        color: #ffcc00;    
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding-top: 1rem;
+    }
+
+    .team-item__text {
+        font-size: 1rem;
+    }
+    
+    /*md footer start*/
+    .footer-line img {
+        width:auto;
+    }
+    /*md footer end*/
+}
+
+/*lg large*/
+@media (min-width: 992px)  {
+    .section-title {
+        min-height: 150px;
+    }
+
+    /*lg header start*/
+    .top-heading__desc {
+        padding: 0 15%;
+        font-size: 1.7em;
+        padding-top: 10rem;
+    }
+    
+    .top-heading__wrapper {
+        min-height: 530px;
+    }
+
+    a.top-heading__btn, 
+    a.top-heading__btn:focus {
+        font-size: 1.5rem;
+    }
+    /*lg header end*/
+    
+    .timetable-item__btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    .testimonial-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .testimonial-item__content {
+        padding-left: 1.5rem;
+        width: 70%;
+    }
+    
+    .testimonial-item__img {
+        margin-bottom: 0rem;
+        width: 30%;
+    }
+    
+    .advantage-item__text {
+    font-size: 1.2rem;
+    padding: .1rem;
+    text-align: left;
+    }
+    
+    .advantage-item__badge {
+        margin-right: 2rem;
+    }
+    
+    .where__content {
+        padding: 4rem;
+    }
+    
+    #button-up {
+        right: 5%;
+    }
+    
+    .pulse {
+        right: 5%;
+    }
+}
+
+/*extra large*/
+@media (min-width: 1200px)  {
+  
+}
