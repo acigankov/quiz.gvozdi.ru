@@ -271,6 +271,41 @@ a.top-heading__btn,a.top-heading__btn:focus {
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
+
+}
+.top-heading__item {
+    min-height:  178px;
+    padding: 0 40px;
+}
+
+.top-heading__game-name {
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold' , sans-serif;
+    display: inline-block;
+    font-size: 2.5rem;
+    flex-basis: 30%;
+    
+}
+
+.top-heading__descr {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    flex-basis: 30%;
+    font-family: 'Montserrat-Regular' , sans-serif;
+}
+.top-heading__descr span {
+    display: block;
+}
+
+.top-heading__button {
+    display: block;
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.top-heading__button:hover {
+    
 }
 /*header end*/
 

@@ -19,6 +19,18 @@
     a.top-heading__btn:focus {
         font-size: 1.2rem;
     }
+    
+    .top-heading__item {
+        padding: 0 20px;
+    }
+    
+    .top-heading__game-name {
+        font-size: 1.2rem;
+    }
+    
+    .top-heading__descr {
+        font-size: .9rem;
+    } 
     /*xs header end*/
     
     .testimonial-item {
@@ -62,8 +74,7 @@
 
 /*md medium*/
 @media (min-width: 768px)  {
-    
-s    
+        
     .timetable-item__btn {
         padding: 0.4rem 1rem;
         font-size: .85rem;
@@ -87,6 +98,18 @@ s
     .team-item__text {
         font-size: 1rem;
     }
+    
+    .top-heading__item {
+        padding: 0 30px;
+    }
+    
+    .top-heading__game-name {
+        font-size: 2rem;
+    }
+    
+    .top-heading__descr {
+        font-size: 1.5rem;
+    } 
     
     /*md footer start*/
     .footer-line img {
@@ -116,6 +139,19 @@ s
     a.top-heading__btn:focus {
         font-size: 1.5rem;
     }
+    
+    .top-heading__item {
+        padding: 0 40px;
+    }
+    
+    .top-heading__game-name {
+        font-size: 2.5rem;
+    }
+    
+    .top-heading__descr {
+        font-size: 2rem;
+    } 
+    
     /*lg header end*/
     
     .timetable-item__btn {
