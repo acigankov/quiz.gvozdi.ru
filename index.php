@@ -85,58 +85,18 @@
                     </nav>
                 </div>
                 <div class="row">
-                    <div class="top-heading w-100">
-<!--                        <div id="top-heading__slider" class="carousel slide h100 w-100" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <?//php foreach ($games as $game): ?>
-                                    <div class="carousel-item active" data-bsslide="active">
-                                        <div style="background: url(<?//= $game['banner']; ?>) #222 100% 100% / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
-                                            <span class="top-heading__desc">
-                                                <?//=
-                                                date("d ", strtotime($game['date']))
-                                                . getMonthRus(date("n", strtotime($game['date'])))
-                                                . date(" Y", strtotime($game['date']));
-                                                ?></span>
-                                            <span><?//= getDayRus(date("w", strtotime($game['date'])));?></span>
-                                            <div class="top-heading__text text-center text-uppercase">
-                                                <h1><?//= $game['name']; ?></h1>
-                                            </div>
-                                            <a class="top-heading__btn btn text-uppercase c-yellow anchor__link" href="#timetable_anchor">записаться на игру</a>
-                                        </div>
-                                    </div>
-                                <?//php endforeach; ?>
-                            </div>
-                            <a class="carousel-control-prev" href="#top-heading__slider" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#top-heading__slider" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>-->
-                    <?php foreach ($games as $game): ?>
-                        <div style="background: url(<?= $game['banner']; ?>) #222 center center;" class="top-heading__item w-100 d-flex align-items-center justify-content-between">
-                            <span class="top-heading__game-name"><?= $game['name']; ?></span>
-                            <div class="top-heading__descr">
-                                <span> <?=  
-                                            date("d ", strtotime($game['date']))
-                                            . getMonthRus(date("n", strtotime($game['date'])))
-                                            //. date(" Y", strtotime($game['date']));
-                                        ?>
-                                </span>
-                                <span><?= date("H:i", strtotime($game['date'])); ?></span>
-
-                            </div>
-                            <div class="top-heading__button">
-                                <a class="anchor__link" href="#timetable_anchor" title="записаться на игру">
-                                    <img src="img/games/arrow.png" alt="записаться на игру" title="записаться на игру">
-                                </a>
-                            </div> 
-                        </div>  
-                    <?php endforeach; ?>
-
-
+                    <div class="top-heading w-100 d-flex align-items-center flex-wrap position-relative">
+                        <div class="top-heading__title">
+                            <h1>гвоздатый <span>квиз</span></h1>
+                        </div>
+                        <div class="top-heading__desc">
+                            <p>
+                                Квиз - командная викторина с денежными призами по мотивам любимых
+                                фильмов с весёлыми вопросами и крутым шоу.
+                                Отдохни в баре "Гвозди" с друзьями и заработай на этом денег.
+                            </p>
+                        </div>
+                        <a class="top-heading__btn btn text-uppercase anchor__link" href="#timetable_anchor">записаться на игру</a>
                     </div>
                 </div>
             </div>

@@ -3,78 +3,143 @@
     .section-title {
         min-height: 100px;
     }
-    
+
     /*xs header start*/
-    
-    .top-heading__desc {
-        padding-top: 0;
+
+    .top-heading {
+        min-height: 535px;
+        background: url('../img/banner/head_bgr_sm.jpg') #ffcc00 no-repeat center center;
+    }
+
+    .top-heading__title {
+        margin-top: 50%;
+    }
+
+    .top-heading__title h1{
+        font-size: 1.5rem;
     }
     
+    .top-heading__title span {
+        font-size: 3.3rem;
+    }
+
+    .top-heading__desc {
+        position: initial;
+        width: 100%;
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+
     .top-heading__wrapper {
         min-height: 400px;
     }
 
-    
+
     a.top-heading__btn, 
     a.top-heading__btn:focus {
         font-size: 1.2rem;
+        margin: 0 auto;
     }
-    
+
     .top-heading__item {
         padding: 0 20px;
     }
-    
+
     .top-heading__game-name {
         font-size: 1.2rem;
     }
-    
+
     .top-heading__descr {
         font-size: .9rem;
     } 
     /*xs header end*/
-    
+
     .testimonial-item {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .testimonial-item__img {
         margin-bottom: 1.5rem;
     }
-    
-    
+
+
     .advantage-item {
         flex-direction: column;
     }
-    
+
     .advantage-item__badge {
         margin:0;
     }
-    
+
     .advantage-item__text {
-    font-size: 1rem;
-    padding: .9rem;
-    text-align: center;
+        font-size: 1rem;
+        padding: .9rem;
+        text-align: center;
     }
-    
+
     .where__content {
         padding: 2rem;
     }
-    
+
     /*xs footer start*/
-    
+
 
     /*xs footer end*/
-    
+
 }    
 /*sm small*/
-@media (min-width: 576px)  {
+@media (min-width: 480px)  {
     
+    .top-heading {
+        flex-direction: column;
+        min-height: 535px;
+        background: url('../img/banner/head_bgr_md.jpg') #ffcc00 no-repeat center center;
+    }
+    
+    .top-heading__title {
+        margin-top: 20%;
+        flex-basis: 0;
+        align-self: baseline;
+    }
+    
+    
+    .top-heading__desc {
+        position:absolute;
+        width: 50%;
+        left: 20px;
+        font-size: 1rem;
+        color: #000;
+        text-align: left;
+        padding-left: 0;
+    }
+    a.top-heading__btn, 
+    a.top-heading__btn:focus {
+        font-size: 1.2rem;
+        margin-left: 20px;
+        margin-top: 20px;
+        align-self: baseline;
+    }
 }
 
 /*md medium*/
-@media (min-width: 768px)  {
-        
+@media (min-width: 768px) and (max-width: 991px)  {
+    
+    
+    .top-heading__title {
+        margin-top: 20%;
+        flex-basis: 0;
+    }
+    
+    .top-heading__desc {
+        position:absolute;
+        width: 50%;
+        left: 20px;
+        font-size: 1.2rem;
+        color: #000;
+        text-align: left;
+    }
+
     .timetable-item__btn {
         padding: 0.4rem 1rem;
         font-size: .85rem;
@@ -98,19 +163,19 @@
     .team-item__text {
         font-size: 1rem;
     }
-    
+
     .top-heading__item {
         padding: 0 30px;
     }
-    
+
     .top-heading__game-name {
         font-size: 2rem;
     }
-    
+
     .top-heading__descr {
         font-size: 1.5rem;
     } 
-    
+
     /*md footer start*/
     .footer-line img {
         width:auto;
@@ -124,41 +189,78 @@
         min-height: 150px;
     }
 
+
+
     /*lg header start*/
+
+    .top-heading {
+        flex-direction: row;
+        min-height: 535px;
+        background: url('../img/banner/head_bgr_lg.jpg') 100% 100%;
+    }
+
+
+    .top-heading__title {
+        flex-basis: 30%;
+        padding-left: 20px;
+        line-height: 2px;
+        margin-top: 0;
+        align-self: initial;
+    }
+
+    .top-heading__title h1 {
+        font-family: 'Montserrat-Black' , sans-serif;
+        font-size: 2.13rem;
+        line-height: 0.7;
+
+    }
+
+    .top-heading__title span {
+        display: block;
+        font-size: 5.1rem;
+        font-family: 'Montserrat-Black' , sans-serif;
+        color: #000;
+    }
+
     .top-heading__desc {
-        padding: 0 15%;
-        font-size: 1.7em;
-        padding-top: 10rem;
+        position:absolute;
+        width: 40%;
+        bottom: 8%;
+        left: 20px;
+        font-size: 1.2rem;
+        font-family: 'Montserrat-Bold' , sans-serif;
+        color: #000;
+        padding-left: 0;
     }
-    
-    .top-heading__wrapper {
-        min-height: 530px;
-    }
+
+
 
     a.top-heading__btn, 
     a.top-heading__btn:focus {
         font-size: 1.5rem;
+        margin: 0;
+        align-self: initial;
     }
-    
+
     .top-heading__item {
         padding: 0 40px;
     }
-    
+
     .top-heading__game-name {
         font-size: 2.5rem;
     }
-    
+
     .top-heading__descr {
         font-size: 2rem;
     } 
-    
+
     /*lg header end*/
-    
+
     .timetable-item__btn {
         padding: 0.7rem 1.8rem;
         font-size: 1rem;
     }
-    
+
     .testimonial-item {
         flex-direction: row;
         text-align: left;
@@ -168,30 +270,30 @@
         padding-left: 1.5rem;
         width: 70%;
     }
-    
+
     .testimonial-item__img {
         margin-bottom: 0rem;
         width: 30%;
     }
-    
+
     .advantage-item__text {
-    font-size: 1.2rem;
-    padding: .1rem;
-    text-align: left;
+        font-size: 1.2rem;
+        padding: .1rem;
+        text-align: left;
     }
-    
+
     .advantage-item__badge {
         margin-right: 2rem;
     }
-    
+
     .where__content {
         padding: 4rem;
     }
-    
+
     #button-up {
         right: 5%;
     }
-    
+
     .pulse {
         right: 5%;
     }
@@ -199,5 +301,5 @@
 
 /*extra large*/
 @media (min-width: 1200px)  {
-  
+
 }
