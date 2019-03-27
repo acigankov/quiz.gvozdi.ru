@@ -1,5 +1,11 @@
 /*xs extra small*/
 @media (min-width: 1px)  {
+
+    .container {
+        max-width: 100%;
+    }
+
+
     .section-title {
         min-height: 100px;
     }
@@ -7,18 +13,18 @@
     /*xs header start*/
 
     .top-heading {
-        min-height: 535px;
-        background: url('../img/banner/head_bgr_sm.jpg') #ffcc00 no-repeat center center;
+        background: url('../img/banner/head_bgr_sm.jpg') #ffcc00 no-repeat;
+        background-size: 100%;
     }
 
     .top-heading__title {
-        margin-top: 50%;
+        margin-top: 40%;
     }
 
     .top-heading__title h1{
         font-size: 1.5rem;
     }
-    
+
     .top-heading__title span {
         font-size: 3.3rem;
     }
@@ -26,8 +32,8 @@
     .top-heading__desc {
         position: initial;
         width: 100%;
-        font-size: 1rem;
-        padding-left: 20px;
+        font-size: .9rem;
+        padding: 10px 20px;
     }
 
     .top-heading__wrapper {
@@ -38,7 +44,7 @@
     a.top-heading__btn, 
     a.top-heading__btn:focus {
         font-size: 1.2rem;
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .top-heading__item {
@@ -89,56 +95,70 @@
 
 }    
 /*sm small*/
-@media (min-width: 480px)  {
-    
+@media (min-width: 576px)  {
+    /*    
+        .top-heading {
+            flex-direction: column;
+            min-height: 535px;
+            background: url('../img/banner/head_bgr_md.jpg') #ffcc00 no-repeat 100% 100%;
+        }
+        
+        .top-heading__title {
+            margin-top: 20%;
+            flex-basis: 0;
+            align-self: baseline;
+        }
+        
+        
+        .top-heading__desc {
+            position:absolute;
+            width: 50%;
+            left: 20px;
+            font-size: 1rem;
+            color: #000;
+            text-align: left;
+            padding-left: 0;
+        }
+        a.top-heading__btn, 
+        a.top-heading__btn:focus {
+            font-size: 1.2rem;
+            margin-left: 20px;
+            margin-top: 20px;
+            align-self: baseline;
+        }*/
+}
+
+/*md medium*/
+@media (min-width: 768px)  {
+
     .top-heading {
         flex-direction: column;
         min-height: 535px;
-        background: url('../img/banner/head_bgr_md.jpg') #ffcc00 no-repeat center center;
+        background: url('../img/banner/head_bgr_md.jpg') #ffcc00 no-repeat 100% 100%;
     }
-    
     .top-heading__title {
         margin-top: 20%;
         flex-basis: 0;
         align-self: baseline;
     }
-    
-    
+
     .top-heading__desc {
         position:absolute;
         width: 50%;
         left: 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #000;
         text-align: left;
         padding-left: 0;
     }
+
     a.top-heading__btn, 
     a.top-heading__btn:focus {
         font-size: 1.2rem;
         margin-left: 20px;
         margin-top: 20px;
         align-self: baseline;
-    }
-}
-
-/*md medium*/
-@media (min-width: 768px) and (max-width: 991px)  {
-    
-    
-    .top-heading__title {
-        margin-top: 20%;
-        flex-basis: 0;
-    }
-    
-    .top-heading__desc {
-        position:absolute;
-        width: 50%;
-        left: 20px;
-        font-size: 1.2rem;
-        color: #000;
-        text-align: left;
-    }
+    }    
 
     .timetable-item__btn {
         padding: 0.4rem 1rem;
@@ -152,6 +172,7 @@
     .team-item {
         padding: 2rem;
     }
+
     .team-item__name {
         font-family: 'Montserrat-Bold' , sans-serif;
         color: #ffcc00;    
@@ -185,18 +206,21 @@
 
 /*lg large*/
 @media (min-width: 992px)  {
+    
+    .container {
+        max-width: 1140px;
+    }
+    
     .section-title {
         min-height: 150px;
     }
-
-
 
     /*lg header start*/
 
     .top-heading {
         flex-direction: row;
         min-height: 535px;
-        background: url('../img/banner/head_bgr_lg.jpg') 100% 100%;
+        background: url('../img/banner/head_bgr_lg.jpg') #ffcc00 no-repeat 100% 100%;
     }
 
 
@@ -227,12 +251,11 @@
         width: 40%;
         bottom: 8%;
         left: 20px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-family: 'Montserrat-Bold' , sans-serif;
         color: #000;
         padding-left: 0;
     }
-
 
 
     a.top-heading__btn, 
