@@ -296,8 +296,13 @@ $(document).ready(function () {
             $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
         });
                 
-    //шаманим активные слайды
-     $('.active[data-bsslide=active]').next('.active').toggleClass('active');
+   
+//    опции карусельки
+//    $('.carousel').carousel({
+//        interval: 20000000
+//    });
+    
+    
     
 //end file
 });
