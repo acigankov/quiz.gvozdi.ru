@@ -401,26 +401,33 @@
                     </div>
                 </div>
                 <div class="team__content row">
-                    <div class="team-item col-12 col-md-4">
+                    <div class="team-item col-12 col-md-3 col-sm-6">
                         <div class="team-item__img">
                             <img src="img/team/1.jpg" alt="foto" class="img-fluid img-hover-yellow" />
                         </div>
                         <div class="team-item__name">Антон Skorob</div>
                         <div class="team-item__text">Ведущий </div>
                     </div>
-                    <div class="team-item col-12 col-md-4">
+                    <div class="team-item col-12 col-md-3 col-sm-6">
                         <div class="team-item__img">
                             <img src="img/team/2.jpg" alt="foto" class="img-fluid img-hover-yellow" />
                         </div>
                         <div class="team-item__name">Василий</div>
                         <div class="team-item__text">Организатор </div>
                     </div>
-                    <div class="team-item col-12 col-md-4">
+                    <div class="team-item col-12 col-md-3 col-sm-6">
                         <div class="team-item__img">
                             <img src="img/team/3.jpg" alt="foto" class="img-fluid img-hover-yellow" />
                         </div>
                         <div class="team-item__name">Мария</div>
                         <div class="team-item__text">Администратор </div>
+                    </div>
+                    <div class="team-item col-12 col-md-3 col-sm-6">
+                        <div class="team-item__img">
+                            <img src="img/team/4.jpg" alt="foto" class="img-fluid img-hover-yellow" />
+                        </div>
+                        <div class="team-item__name">Олег</div>
+                        <div class="team-item__text">Редактор </div>
                     </div>
                 </div>
             </div>
