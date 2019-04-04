@@ -68,14 +68,14 @@ $(document).ready(function () {
 //        mask: 'a{55}',
 //        jitMasking: true
 //    });
-    $('.email_mask').inputmask({
-        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-        greedy: false,
-        onBeforePaste: function (pastedValue, opts) {
-            pastedValue = pastedValue.toLowerCase();
-            return pastedValue.replace("mailto:", "");
-        }
-    });
+//    $('.email_mask').inputmask({
+//        mask: "*{1,20}[.*{1,20}][.-{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+//        greedy: false,
+//        onBeforePaste: function (pastedValue, opts) {
+//            pastedValue = pastedValue.toLowerCase();
+//            return pastedValue.replace("mailto:", "");
+//        }
+//    });
         
     //формы 
     
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
     }
     function validateEmail(selector) {
-        var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+        var pattern = /.+@.+\..+/i;
         if(!pattern.test(selector.val())) {
             selector.addClass('is-invalid');
         } else
