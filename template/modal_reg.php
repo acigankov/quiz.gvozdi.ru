@@ -12,7 +12,16 @@
             </div>
             <div class="modal-body">
                 <h4 class="text-center py-3" id="form-game-title">Гарри Поттер</h4>
+                
+                
                 <form class="needs-validation" action="#" method="post" id="form-register" novalidate>
+                    <div class="form-group row">
+                        <label for="form_reg_select" class="col-6 col-form-label">Выберите игру:</label>
+                        <div class="col-6 mb-3">
+                            <select name="form_reg_gameid" class="form-control form-control-sm" id="form_reg_select">                               
+                            </select>
+                        </div>
+                    </div> 
                     <div class="col mb-3">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -81,7 +90,6 @@
                         </div>
                     </div>
                     <input type="hidden" name="form_reg">
-                    <input type="hidden" name="form_reg_gameid">
                     <button class="btn btn-primary" type="submit">Отправить</button>
                 </form>
                 <div class="result_ d-none"></div>

@@ -259,9 +259,9 @@ $(document).ready(function () {
     }
     //формирование данных формы
 
-    let gameId;
+    let seasonId;
     $('.timetable-item__btn').click(function () {
-        gameId = $(this).data('game_id');
+        seasonId = $(this).data('season_id');
     });
 
 
@@ -272,16 +272,39 @@ $(document).ready(function () {
             type: "POST", //метод отправки
             //dataType: "html", //формат данных
             data: {
-                gameId: gameId
+                seasonId: seasonId
             },
             success: function (response) { //Данные отправлены успешно
                 var result = $.parseJSON(response);
-                $('#form-game-title').text(result.game_title);
-                $('input[name=form_reg_gameid]').val(gameId);
-
+                
+                $('#form-game-title').text(result.season_title);
+                
+                $('#form_reg_select option').remove();
+                
+                for(let i = 0; i<result.games.length; i++) {
+                    let date = new Date(result.games[i].date);
+                    var options = {
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric',
+                        weekday: 'short',
+                        timezone: 'UTC',
+                        hour: 'numeric',
+                        minute: 'numeric',
+                      };
+                    
+                    $('#form_reg_select')
+                            .append('<option value="'+result.games[i].id+'">'
+                            + date.toLocaleDateString("ru" , options)
+                            + " #" +  result.games[i].description
+                            + '<span style="display:none" id="game_ID"></span>'
+                            + '</option>'
+                            );
+                }
+                
             },
             error: function (response) { // Данные не отправлены
-
+                $('#form-game-title').text('произошла ошибка');
             },
             complete: function () {
 

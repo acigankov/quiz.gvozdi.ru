@@ -24,7 +24,12 @@ $data = [
 ];
 
 //games
-$limit = 6;
-$games = getGames($limit);
+$limit = 3;
+getGames($limit) ? $games = getGames($limit) : $games = [] ;
+getSeason() ? $seasons = getSeason() : $seasons = [];
+$gamesGP = getGamesBySeason(1);
+$gamesMarvel = getGamesBySeason(2);
+$gamesGOT = getGamesBySeason(3);
+
 
 ?>

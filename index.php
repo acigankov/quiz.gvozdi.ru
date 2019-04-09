@@ -98,28 +98,30 @@
                                             <a class="top-heading__btn btn text-uppercase c-yellow anchor__link" href="#timetable_anchor">записаться на игру</a>
                                         </div>
                                     </div>
-                                
-                                <?php foreach ($games as $game): ?>
-                                    <div class="carousel-item" >
-                                        <div style="background: url(<?= $game['banner']; ?>) #222 100% 100% / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
-                                            
-                                            <div class="top-heading__slider-text text-center flex-column">
-                                            
-                                                <span class="top-heading__desc">
-                                                    <?=
-                                                    date("d ", strtotime($game['date']))
-                                                    . getMonthRus(date("n", strtotime($game['date'])))
-                                                    . date(" Y", strtotime($game['date']));
-                                                    ?></span>
-                                                <span><?= getDayRus(date("w", strtotime($game['date'])));?></span>
-                                                <div class="top-heading__text text-center text-uppercase">
-                                                    <h1><?= $game['name']; ?></h1>
+                                <?php if($games): ?>
+                                    <?php foreach ($games as $game): ?>
+                                        <div class="carousel-item" >
+                                            <div style="background: url(<?= $game['banner']; ?>) #222 100% 100% / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
+
+                                                <div class="top-heading__slider-text text-center flex-column">
+
+                                                    <span class="top-heading__desc">
+                                                        <?=
+                                                        date("d ", strtotime($game['date']))
+                                                        . getMonthRus(date("n", strtotime($game['date'])))
+                                                        . date(" Y", strtotime($game['date']));
+                                                        ?></span>
+                                                    <span><?= getDayRus(date("w", strtotime($game['date'])));?></span>
+                                                    <div class="top-heading__text text-center text-uppercase">
+                                                        <h1><?= $game['name']; ?></h1>
+                                                    </div>
                                                 </div>
+                                                <a class="top-heading__btn btn text-uppercase c-yellow anchor__link" href="#timetable_anchor">записаться на игру</a>
                                             </div>
-                                            <a class="top-heading__btn btn text-uppercase c-yellow anchor__link" href="#timetable_anchor">записаться на игру</a>
                                         </div>
-                                    </div>
-                                <?php endforeach; ?>
+                                    <?php endforeach; ?>
+                                <?php endif ?>
+                                
                             </div>
                             <a class="carousel-control-prev" href="#top-heading__slider" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -191,35 +193,34 @@
                 </div>
                 <div class="timetable__content  w-100">
                     <div class="row">
-                        <?php foreach ($games as $game): ?>
-                            <div class="timetable-item flex-column col-md-4 col-12">
-                                <?php if (isset($game['logo'])) :?>
+                        <?php if($games) : ?>
+                            <?php foreach ($games as $game) : ?>
+                                <div class="timetable-item flex-column col-md-4 col-12">
                                     <img src="<?= $game['logo']; ?>" class="img-fluid" alt="<?= $game['name']; ?>">
-                                <?php endif?>
-                                
-                                <div class="timetable-item__title text-uppercase py-3">
-                                    <h3><?= $game['name']; ?></h3>
-                                    <p class="text-center text-uppercase"><?= $game['description']; ?></p>
+                                    <div class="timetable-item__title text-uppercase py-3">
+                                        <h3><?= $game['name']; ?></h3>
+                                    </div>
+                                    <div class="timetable-item__date py-2">
+                                        <?=
+                                        date("d ", strtotime($game['date']))
+                                        . getMonthRus(date("n", strtotime($game['date'])))
+                                        . date(" Y", strtotime($game['date']));
+                                        ?>
+                                    </div>
+                                    <div class="timetable-item__time py-1">
+                                        <?= date("H:i", strtotime($game['date'])); ?>
+                                    </div>
+                                    <div class="timetable-item__description px-3 px-lg-5 mb-lg-5 mb-3">
+                                        <?= $game['adress']; ?>
+                                        <?= $game['bar']; ?>
+                                    </div>
+                                    <button class="timetable-item__btn btn " type="button" data-season_id="<?= $game['season_id']; ?>" data-toggle="modal" data-target="#modal_reg">записаться на игру</button>
                                 </div>
-                                <div class="timetable-item__date py-2">
-                                <?= date("d ", strtotime($game['date']))
-                                    . getMonthRus(date("n", strtotime($game['date'])))
-                                    . date(" Y", strtotime($game['date']));
-                                ?>
-                                </div>
-                                <div class="timetable-item__time py-1">
-                                    <?= date("H:i", strtotime($game['date'])); ?>
-                                </div>
-                                <div class="timetable-item__description px-3 px-lg-5 mb-lg-5 mb-3">
-                                    <?= $game['adress']; ?>
-                                    <?= $game['bar']; ?>
-                                </div>
-                                <button class="timetable-item__btn btn mt-lg-5 mt-3" type="button" data-game_id="<?= $game['id']; ?>" data-toggle="modal" data-target="#modal_reg">записаться на игру</button>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach ?>
+                        <?php endif ?>
                     </div>
                 </div>
-            </div>
+            </div>    
         </section>
         <!--section timetable end-->
 

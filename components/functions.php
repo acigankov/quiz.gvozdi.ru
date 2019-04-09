@@ -43,8 +43,49 @@ function getDayRus($day) {
     return $days[$day];
 }
 
+function getShortDayRus($day) {
+    $days = array(
+        // в формате w возвращает порядковый номер дня недели от 0 до 6. 0 -вс 
+        'Вс',
+        'Пн',
+        'Вт', 
+        'Ср',
+        'Чт',
+        'Пт',
+        'сб'
+    );
+    return $days[$day];
+}
+
+
+
+
+
 /**
- * Достает игры из базы игры
+ * Достает сезоны из базы 
+ * @param null
+ * @return array or false
+ */
+function getSeason() {
+    
+    $db = DB::getConnection();
+    $sql = "SELECT id, name, season_banner as banner, season_logo as logo
+            FROM seasons";
+    $result = $db->prepare($sql); 
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();       
+    $seasons = $result->fetchAll();
+    
+    if($seasons){
+        return $seasons;
+    }
+    
+    return false;
+}
+
+
+/**
+ * Достает игры из базы 
  * @param int $limit row limt
  * @return array or false
  */
@@ -62,12 +103,15 @@ function getGames($limit) {
             g.description as description,
             g.game_logo as logo,
             g.game_banner as banner,
+            g.season_id as season_id,
             l.name as bar,
             l.adress
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
-            WHERE g.active = 1 
+            WHERE g.active = 1  
+            GROUP BY g.name
             ORDER BY g.start_date LIMIT :limit";
+        
         
         $result = $db->prepare($sql);
         $result->bindParam(':limit', $limit, PDO::PARAM_INT);
@@ -82,8 +126,50 @@ function getGames($limit) {
     return false;
 }
 
+
 /**
- * Достает игры из базы название игры
+ * Достает игры из базы по сезону
+ * @param int $id row game id
+ * @return array or false
+ */
+
+function getGamesBySeason($season) {
+
+    if ($season) {
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT 
+            g.id,
+            g.name as name,
+            g.start_date as date,
+            g.description as description,
+            g.game_logo as logo,
+            g.game_banner as banner,
+            l.name as bar,
+            l.adress
+            FROM games g  
+            LEFT JOIN location l on l.id = g.locationID 
+            WHERE g.active = 1 
+            AND g.season_id = :season
+            ORDER BY g.start_date";
+        
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->bindParam(':season', $season, PDO::PARAM_INT);
+        $result->execute();       
+        $games = $result->fetchAll();
+
+        if($games){
+            return $games;
+        }
+    }
+    return false;
+}
+
+
+/**
+ * Достает игры из базы название по id
  * @param int $id row game id
  * @return string or false
  */
@@ -103,6 +189,32 @@ function getGameNameById ($id) {
         
         if($gameName){
             return $gameName;
+        }
+    }
+    return false;
+}
+
+/**
+ * Достает имя сезона из базы название по id
+ * @param int $id 
+ * @return string or false
+ */
+
+
+function getSeasonNameById ($id) {
+    
+    if ($id) {
+
+        $db = DB::getConnection();
+        $sql = "SELECT name FROM seasons WHERE id = :id";
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        $seasonName = $result->fetchColumn();
+        
+        if($seasonName){
+            return $seasonName;
         }
     }
     return false;

@@ -2,18 +2,23 @@
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
 
-if(isset($_POST['gameId'])) {
+if(isset($_POST['seasonId'])) {
     
-    $game_id = (int)($_POST['gameId']);
+    $season_id = (int)($_POST['seasonId']);
     
 } else {
    echo json_encode('Ошибка! данные не переданы ',  JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK); 
 }
 
+$getGames = getGamesBySeason($season_id);
+
+
 $result = [
-    'game_title' => getGameNameById($game_id)
+    'season_title' => getSeasonNameById($season_id),
+    'games' => getGamesBySeason($season_id)
 ];
         
+
 echo json_encode($result);
         
 ?>
