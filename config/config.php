@@ -24,7 +24,7 @@ $data = [
 ];
 
 //games
-$limit = 3;
+$limit = 6;
 $games = getGames($limit);
 
 ?>

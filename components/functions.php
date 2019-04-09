@@ -59,6 +59,7 @@ function getGames($limit) {
             g.id,
             g.name as name,
             g.start_date as date,
+            g.description as description,
             g.game_logo as logo,
             g.game_banner as banner,
             l.name as bar,

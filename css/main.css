@@ -360,7 +360,10 @@ a.top-heading__btn,a.top-heading__btn:focus {
     font-size: 1.6rem;
     color: #fff;
 }
-
+.timetable-item__title p {
+    font-size: 0.9rem;
+    color: #fff;
+}
 .timetable-item__description {
     font-size: 1.05rem;
 }

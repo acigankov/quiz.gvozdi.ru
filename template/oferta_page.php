@@ -161,6 +161,8 @@
                             <li>33&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
                             <li>44&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
                             <li>55&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
+                            <li>66&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
+                            <li>77&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
                         </ul>
                     </div>
                 </div>
