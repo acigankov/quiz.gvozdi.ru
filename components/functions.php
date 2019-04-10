@@ -110,6 +110,7 @@ function getGames($limit) {
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
             WHERE g.active = 1  
+            GROUP BY g.season_id 
             ORDER BY g.start_date LIMIT :limit";
         
         
@@ -124,6 +125,47 @@ function getGames($limit) {
             return $games;
         }
     }
+    return false;
+}
+
+/**
+ * Достает игры из базы 
+ * @param int $limit row limt
+ * @return array or false
+ */
+
+function getAllGames() {
+
+    
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT 
+            g.id,
+            g.name as name,
+            g.start_date as date,
+            g.description as description,
+            g.game_logo as logo,
+            g.game_banner as banner,
+            g.season_id as season_id,
+            l.name as bar,
+            l.adress
+            FROM games g  
+            LEFT JOIN location l on l.id = g.locationID 
+            WHERE g.active = 1  
+            ORDER BY g.start_date";
+        
+        
+        
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();       
+        $games = $result->fetchAll();
+
+        if($games){
+            return $games;
+        }
+        
     return false;
 }
 

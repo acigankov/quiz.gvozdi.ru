@@ -220,20 +220,27 @@
                         <?php endif ?>
                     </div>
                 </div>
+                <div class="timetable-more row justify-content-center align-items-center py-3 "> 
+                    <a class="timetable-more__btn" data-toggle="collapse" 
+                       href="#gamestable" 
+                       role="button">
+                        больше игр <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
             </div>    
         </section>
         <!--section timetable end-->
         
         
         <!--section gamestable start -->
-        <section class="gamestable container">
-            <div class="row">
+        <section class="gamestable container collapse" id="gamestable">
+<!--            <div class="row">
                 <div class="gamestable__title section-title text-center text-uppercase">
                     <h2 class="">
                         расписание игр
                     </h2>
                 </div>
-            </div>
+            </div>-->
             <div class="row">
                 <div class="gamestable-content w-100">
                     <table>

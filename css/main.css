@@ -33,6 +33,10 @@
     margin-left: 0; 
 }
 
+.btn:focus {
+    outline: none;
+}
+
 html, body {
     height: 100%;
     font-size: 16px;
@@ -387,13 +391,38 @@ a.top-heading__btn,a.top-heading__btn:focus {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
+
+
+.timetable-more {
+    background: #ffcc00;
+}
+
+a.timetable-more__btn {
+    font-family: 'Montserrat-Bold' , sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: .5rem;
+    padding: 0.7rem 1.8rem;
+}
+
+
+.timetable-more__btn:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px 5px #fff;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    
+}
 /*section timetable end*/
 
 
 /*section gamestable start*/
 
 .gamestable {
-    min-height: 500px;
     background-color: #ffcc00
 }
 
@@ -429,7 +458,6 @@ a.top-heading__btn,a.top-heading__btn:focus {
 }
 
 .gamestable-content__btn:hover {
-    
     color: #fff;
     border: 2px solid #fff;
     box-shadow: 0 0 15px 5px #fff;

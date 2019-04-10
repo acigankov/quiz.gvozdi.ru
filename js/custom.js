@@ -319,6 +319,25 @@ $(document).ready(function () {
             $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
         });
                 
+                
+      if(!$('.timetable-more__btn').hasClass('more-btn-active')) {
+          $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+      } else {
+          $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+      }
+      
+                
+   
+   $('.timetable-more__btn').on('click' , function(e){
+       e.preventDefault;
+       $(this).toggleClass('more-btn-active');
+       if(!$('.timetable-more__btn').hasClass('more-btn-active')) {
+          $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+      } else {
+          $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+      }
+   });
+   
    
 //    опции карусельки
 //    $('.carousel').carousel({
