@@ -444,7 +444,7 @@ a.top-heading__btn,a.top-heading__btn:focus {
 .gamestable-content__btn {
     font-family: 'Montserrat-Regular' , sans-serif;
     font-size: 1rem;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     color:#fff;
     border-radius: .5rem;
     padding: 0.7rem 1.8rem;
@@ -452,7 +452,7 @@ a.top-heading__btn,a.top-heading__btn:focus {
 
 .gamestable-content__btn:hover {
     color: #fff;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     box-shadow: 0 0 15px 5px #fff;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
