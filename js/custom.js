@@ -327,16 +327,18 @@ $(document).ready(function () {
       }
       
                 
-   
-   $('.timetable-more__btn').on('click' , function(e){
-       e.preventDefault;
-       $(this).toggleClass('more-btn-active');
-       if(!$('.timetable-more__btn').hasClass('more-btn-active')) {
-          $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
-      } else {
-          $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
-      }
-   });
+       //кнопка скрытия/показа расписания игр         
+                
+    $('#gamestable').on('hidden.bs.collapse', function () {
+        $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+    })
+    
+    $('#gamestable').on('shown.bs.collapse', function () {
+        $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+    })
+
+
+
    
    
 //    опции карусельки

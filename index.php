@@ -221,11 +221,10 @@
                     </div>
                 </div>
                 <div class="timetable-more row justify-content-center align-items-center py-3 "> 
-                    <a class="timetable-more__btn" data-toggle="collapse" 
-                       href="#gamestable" 
-                       role="button">
-                        больше игр <i class="fas fa-caret-down"></i>
-                    </a>
+                    <button class="timetable-more__btn btn" data-toggle="collapse" 
+                       data-target="#gamestable"
+                       type="button">
+                    </button>
                 </div>
             </div>    
         </section>

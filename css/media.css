@@ -50,11 +50,8 @@
     /*xs header end*/
     
     /*xs timetable start*/
-    
-    .timetable-more__btn:hover {
-        box-shadow: none;
-    }
-    
+   
+     
     /*xs timetable end*/
     
     /*xs testimonial start*/
@@ -171,7 +168,7 @@
         border: 1px solid #fff;
         padding: 0.5rem 1.8rem;
     }
-    /*md gamestable start*/
+    /*md gamestable end*/
     
     
     /*md footer start*/
@@ -251,11 +248,7 @@
         padding: 0.7rem 1.8rem;
         font-size: 1rem;
     }
-    
-    .timetable-more__btn:hover {
-        box-shadow: 0 0 15px 5px #fff;
-    }
-    
+
     /*lg timetable end*/
     
     /*lg testimonial start*/

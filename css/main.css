@@ -33,8 +33,12 @@
     margin-left: 0; 
 }
 
+button:focus,
 .btn:focus {
     outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
 }
 
 html, body {
@@ -397,10 +401,7 @@ a.top-heading__btn,a.top-heading__btn:focus {
     background: #ffcc00;
 }
 
-a.timetable-more__btn, 
-a.timetable-more__btn:active,   
-a.timetable-more__btn:visited,   
-a.timetable-more__btn:focus {   
+.timetable-more__btn {    
     font-family: 'Montserrat-Bold' , sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
@@ -411,24 +412,14 @@ a.timetable-more__btn:focus {
 }
 
 
-.timetable-more__btn:hover {
-    color: #fff;
-    border: 2px solid #fff;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    
-}
+
 /*section timetable end*/
 
 
 /*section gamestable start*/
 
-.gamestable {
-    background-color: #ffcc00
-}
-
 .gamestable-content {
+    background-color: #ffcc00;
     padding: 0 1.2rem;
 }
 .gamestable-content table {
