@@ -188,7 +188,7 @@
             <div class="container">
                 <div class="row">
                     <div class="timetable__title section-title" id="timetable_anchor">
-                        <h2>расписание игр</h2>
+                        <h2>игры</h2>
                     </div>
                 </div>
                 <div class="timetable__content  w-100">
@@ -223,7 +223,46 @@
             </div>    
         </section>
         <!--section timetable end-->
+        
+        
+        <!--section gamestable start -->
+        <section class="gamestable container">
+            <div class="row">
+                <div class="gamestable__title section-title text-center text-uppercase">
+                    <h2 class="">
+                        расписание игр
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="gamestable-content w-100">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <?php if($allGames) : ?>
+                            <?php foreach ($allGames as $game) : ?>
+                                <td><?= $game['name']; ?>  #<?= $game['description']; ?></td>
+                                <td><?= date("d.m.Y", strtotime($game['date'])); ?> <?= date("H:i", strtotime($game['date'])); ?></td>
+                                <td><button class="gamestable-content__btn btn " type="button" 
+                                            data-season_id="<?= $game['season_id']; ?>" 
+                                            data-toggle="modal" data-target="#modal_reg">
+                                        записаться
+                                    </button>
+                                </td>
+                            </tr> 
+                            <?php endforeach ?>
+                            <?php else : ?>
+                                <h3>активных игр нет</h3>
+                            <?php endif ?>
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+        </section>
 
+
+
+        <!--section gamestable table end-->
         <!--section testimonial start-->        
         <section class="testimonail">
             <div class="container">

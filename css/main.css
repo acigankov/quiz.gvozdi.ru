@@ -389,6 +389,58 @@ a.top-heading__btn,a.top-heading__btn:focus {
 }
 /*section timetable end*/
 
+
+/*section gamestable start*/
+
+.gamestable {
+    min-height: 500px;
+    background-color: #ffcc00
+}
+
+.gamestable-content {
+    padding: 0 1.2rem;
+}
+.gamestable-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1.3rem;
+}
+
+.gamestable-content table tr {
+    background-color: #ffb31c;
+}
+
+.gamestable-content table td {
+    text-transform: capitalize;
+    text-align: center;
+    width: 33.33%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Montserrat-Bold' , sans-serif;
+}
+
+.gamestable-content__btn {
+    font-family: 'Montserrat-Regular' , sans-serif;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    color:#fff;
+    border-radius: .5rem;
+    padding: 0.7rem 1.8rem;
+}
+
+.gamestable-content__btn:hover {
+    
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px 5px #fff;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+} 
+
+/*section gamestable end*/
+
+
 /*section testimonial start*/
 .testimonial__title {
     min-height: 150px;
@@ -410,7 +462,6 @@ a.top-heading__btn,a.top-heading__btn:focus {
 .testimonial-item__img {
     width: 100%;
     cursor: pointer;
-
 }
 
 .testimonial-item__img img {

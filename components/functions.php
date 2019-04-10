@@ -92,6 +92,7 @@ function getSeason() {
 
 function getGames($limit) {
 
+    
     if ($limit) {
 
         $db = DB::getConnection();
@@ -109,8 +110,8 @@ function getGames($limit) {
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
             WHERE g.active = 1  
-            GROUP BY g.name
             ORDER BY g.start_date LIMIT :limit";
+        
         
         
         $result = $db->prepare($sql);

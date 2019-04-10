@@ -17,8 +17,6 @@
         background-size: 100%;
     }
 
-
-
     .top-heading__slider-text>h1 {
         font-family: 'Montserrat-Black' , sans-serif;
         font-size: 1.6rem;
@@ -79,6 +77,22 @@
         padding: 2rem;
     }
     
+    /*xs gamestable section start*/
+    
+    .gamestable-content table td {
+        font-size: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .gamestable-content__btn {
+        border-radius: .3rem;
+        font-size: 0.8rem;
+        border: 1px solid #fff;
+        padding: 0.3rem 1rem;
+    }
+    
+    /*xs gamestable section end*/
+    
     /*xs footer start*/
     
 
@@ -126,6 +140,22 @@
     .team-item__text {
         font-size: 1rem;
     }
+    
+    /*md gamestable start*/
+    
+    .gamestable-content table td {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .gamestable-content__btn {
+        border-radius: .5rem;
+        font-size: 1rem;
+        border: 1px solid #fff;
+        padding: 0.5rem 1.8rem;
+    }
+    /*md gamestable start*/
+    
     
     /*md footer start*/
     .footer-line img {
@@ -231,6 +261,10 @@
     .where__content {
         padding: 4rem;
     }
+    
+    
+    
+    
     
     #button-up {
         right: 5%;

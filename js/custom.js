@@ -260,7 +260,7 @@ $(document).ready(function () {
     //формирование данных формы
 
     let seasonId;
-    $('.timetable-item__btn').click(function () {
+    $('.timetable-item__btn , .gamestable-content__btn').click(function () {
         seasonId = $(this).data('season_id');
     });
 

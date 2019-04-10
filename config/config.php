@@ -23,9 +23,9 @@ $data = [
     'head_description'  => 'Квиз - командная интеллектуальная игра с денежными призами, интересными вопросами и морем позитивных эмоций',
 ];
 
-//games
-$limit = 3;
+$limit = 10;
 getGames($limit) ? $games = getGames($limit) : $games = [] ;
+getGames(100) ? $allGames = getGames(100) : $allGames = [] ;
 getSeason() ? $seasons = getSeason() : $seasons = [];
 $gamesGP = getGamesBySeason(1);
 $gamesMarvel = getGamesBySeason(2);
