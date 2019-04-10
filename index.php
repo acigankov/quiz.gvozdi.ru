@@ -234,13 +234,6 @@
         
         <!--section gamestable start -->
         <section class="gamestable container collapse" id="gamestable">
-<!--            <div class="row">
-                <div class="gamestable__title section-title text-center text-uppercase">
-                    <h2 class="">
-                        расписание игр
-                    </h2>
-                </div>
-            </div>-->
             <div class="row">
                 <div class="gamestable-content w-100">
                     <table>

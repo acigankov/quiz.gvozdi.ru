@@ -397,7 +397,10 @@ a.top-heading__btn,a.top-heading__btn:focus {
     background: #ffcc00;
 }
 
-a.timetable-more__btn {
+a.timetable-more__btn, 
+a.timetable-more__btn:active,   
+a.timetable-more__btn:visited,   
+a.timetable-more__btn:focus {   
     font-family: 'Montserrat-Bold' , sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
@@ -411,7 +414,6 @@ a.timetable-more__btn {
 .timetable-more__btn:hover {
     color: #fff;
     border: 2px solid #fff;
-    box-shadow: 0 0 15px 5px #fff;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;

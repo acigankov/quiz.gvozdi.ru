@@ -49,6 +49,16 @@
     }
     /*xs header end*/
     
+    /*xs timetable start*/
+    
+    .timetable-more__btn:hover {
+        box-shadow: none;
+    }
+    
+    /*xs timetable end*/
+    
+    /*xs testimonial start*/
+    
     .testimonial-item {
         flex-direction: column;
         text-align: center;
@@ -58,7 +68,9 @@
         margin-bottom: 1.5rem;
     }
     
+    /*xs testimonial end*/
     
+    /*xs advantage start*/
     .advantage-item {
         flex-direction: column;
     }
@@ -73,11 +85,16 @@
     text-align: center;
     }
     
+    /*xs advantage end*/
+    
+    /*xs where start*/
     .where__content {
         padding: 2rem;
     }
     
-    /*xs gamestable section start*/
+    /*xs where end*/
+    
+    /*xs gamestable  start*/
     
     .gamestable-content table td {
         font-size: 0.8rem;
@@ -91,7 +108,7 @@
         padding: 0.3rem 1rem;
     }
     
-    /*xs gamestable section end*/
+    /*xs gamestable  end*/
     
     /*xs footer start*/
     
@@ -228,10 +245,20 @@
     }
     /*lg header end*/
     
+    /*lg timetable start*/
+    
     .timetable-item__btn {
         padding: 0.7rem 1.8rem;
         font-size: 1rem;
     }
+    
+    .timetable-more__btn:hover {
+        box-shadow: 0 0 15px 5px #fff;
+    }
+    
+    /*lg timetable end*/
+    
+    /*lg testimonial start*/
     
     .testimonial-item {
         flex-direction: row;
@@ -248,6 +275,10 @@
         width: 30%;
     }
     
+    /*lg testimonial end*/
+    
+    /*lg advantage start*/
+    
     .advantage-item__text {
     font-size: 1.2rem;
     padding: .1rem;
@@ -258,13 +289,15 @@
         margin-right: 2rem;
     }
     
+    /*lg advantage end*/
+    
+    /*lg where start*/
+    
     .where__content {
         padding: 4rem;
     }
     
-    
-    
-    
+    /*lg where end*/
     
     #button-up {
         right: 5%;
