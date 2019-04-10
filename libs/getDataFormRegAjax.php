@@ -22,7 +22,7 @@ $getGames = getGamesBySeason($season_id);
 
 
 $result = [
-    'season_title'          => getSeasonNameById($season_id),
+    'season_logo'           => getSeasonLogoById($season_id),
     'games'                 => getGamesBySeason($season_id),
     'seleceted_game_id'     => $seleceted_game_id
 ];

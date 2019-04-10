@@ -280,7 +280,7 @@ $(document).ready(function () {
             success: function (response) { //Данные отправлены успешно
                 var result = $.parseJSON(response);
                 
-                $('#form-game-title').text(result.season_title);
+                $('#form_reg_game_logo').attr('src' , '../' + result.season_logo);
                 
                 $('#form_reg_select option').remove();
                 

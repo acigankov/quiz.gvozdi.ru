@@ -11,8 +11,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h4 class="text-center py-3" id="form-game-title"></h4>
-                
+                <div class="row w-100 justify-content-center">
+                    <img src="" alt="лого" id="form_reg_game_logo" class="img-fluid text-center" >
+                </div>
                 <form class="needs-validation" action="#" method="post" id="form-register" novalidate>
                     <div class="form-group row">
                         <label for="form_reg_select" class="col-6 col-form-label">Выберите игру:</label>

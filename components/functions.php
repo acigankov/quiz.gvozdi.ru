@@ -264,6 +264,32 @@ function getSeasonNameById ($id) {
 }
 
 /**
+ * Достает лого сезона из базы по id
+ * @param int $id 
+ * @return string or false
+ */
+
+
+function getSeasonLogoById ($id) {
+    
+    if ($id) {
+
+        $db = DB::getConnection();
+        $sql = "SELECT season_logo FROM seasons WHERE id = :id";
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        $seasonName = $result->fetchColumn();
+        
+        if($seasonName){
+            return $seasonName;
+        }
+    }
+    return false;
+}
+
+/**
  * Достает игры из базы данные для отправки уведомления о регистарции
  * @param int $id gameid
  * @return array or false
