@@ -244,6 +244,7 @@
                                 <td><?= date("d.m.Y", strtotime($game['date'])); ?> <?= date("H:i", strtotime($game['date'])); ?></td>
                                 <td><button class="gamestable-content__btn btn " type="button" 
                                             data-season_id="<?= $game['season_id']; ?>" 
+                                            data-game_id="<?= $game['id']; ?>" 
                                             data-toggle="modal" data-target="#modal_reg">
                                         записаться
                                     </button>

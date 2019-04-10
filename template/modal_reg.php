@@ -11,8 +11,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <h4 class="text-center py-3" id="form-game-title">Гарри Поттер</h4>
-                
+                <h4 class="text-center py-3" id="form-game-title"></h4>
                 
                 <form class="needs-validation" action="#" method="post" id="form-register" novalidate>
                     <div class="form-group row">

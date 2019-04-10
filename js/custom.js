@@ -260,8 +260,10 @@ $(document).ready(function () {
     //формирование данных формы
 
     let seasonId;
+    let gameId;
     $('.timetable-item__btn , .gamestable-content__btn').click(function () {
         seasonId = $(this).data('season_id');
+        gameId = $(this).data('game_id');
     });
 
 
@@ -272,7 +274,8 @@ $(document).ready(function () {
             type: "POST", //метод отправки
             //dataType: "html", //формат данных
             data: {
-                seasonId: seasonId
+                seasonId: seasonId,
+                gameId: gameId
             },
             success: function (response) { //Данные отправлены успешно
                 var result = $.parseJSON(response);
@@ -290,7 +293,7 @@ $(document).ready(function () {
                         weekday: 'short',
                         timezone: 'UTC',
                         hour: 'numeric',
-                        minute: 'numeric',
+                        minute: 'numeric'
                       };
                     
                     $('#form_reg_select')
@@ -300,8 +303,9 @@ $(document).ready(function () {
                             + '<span style="display:none" id="game_ID"></span>'
                             + '</option>'
                             );
+                       
                 }
-                
+                $('#form_reg_select').find("[value='" + result.seleceted_game_id + "']").attr('selected', 'true');
             },
             error: function (response) { // Данные не отправлены
                 $('#form-game-title').text('произошла ошибка');
