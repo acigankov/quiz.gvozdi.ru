@@ -1,4 +1,3 @@
-
 <!-- Modal -->
 
 <div class="modal fade" id="modal_reg" tabindex="-1" role="dialog"  aria-hidden="true">
