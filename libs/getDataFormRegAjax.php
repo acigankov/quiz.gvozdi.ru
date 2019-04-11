@@ -20,13 +20,21 @@ if(isset($_POST['gameId'])) {
 
 $getGames = getGamesBySeason($season_id);
 
+//заморочка с перефоратированием даты для селекта в форме. УФФ прям.
+foreach ($getGames as $item) {
+    $gamesDate[] = [
+                'gameDate' => getShortDayRus(date("w", strtotime($item['date']))) 
+                . ' ' . date('d.m.Y H:i' , strtotime($item['date'])) 
+                . ' #' . $item['description'],
+                'gameId' => $item['id']
+            ];
+}
 
 $result = [
     'season_logo'           => getSeasonLogoById($season_id),
-    'games'                 => getGamesBySeason($season_id),
+    'gamesDate'             => $gamesDate,
     'seleceted_game_id'     => $seleceted_game_id
 ];
-        
 
 echo json_encode($result);
         

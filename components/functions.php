@@ -46,13 +46,13 @@ function getDayRus($day) {
 function getShortDayRus($day) {
     $days = array(
         // в формате w возвращает порядковый номер дня недели от 0 до 6. 0 -вс 
-        'Вс',
-        'Пн',
-        'Вт', 
-        'Ср',
-        'Чт',
-        'Пт',
-        'сб'
+        'ВС',
+        'ПН',
+        'ВТ', 
+        'СР',
+        'ЧТ',
+        'ПТ',
+        'СБ'
     );
     return $days[$day];
 }
@@ -168,7 +168,6 @@ function getAllGames() {
         
     return false;
 }
-
 
 /**
  * Достает игры из базы по сезону

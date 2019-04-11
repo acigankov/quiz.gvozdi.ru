@@ -284,23 +284,21 @@ $(document).ready(function () {
                 
                 $('#form_reg_select option').remove();
                 
-                for(let i = 0; i<result.games.length; i++) {
-                    let date = new Date(result.games[i].date);
-                    var options = {
-                        year: 'numeric',
-                        month: 'numeric',
-                        day: 'numeric',
-                        weekday: 'short',
-                        timezone: 'UTC',
-                        hour: 'numeric',
-                        minute: 'numeric'
-                      };
-                    
+                for(let i = 0; i<result.gamesDate.length; i++) {
+//                    let date = new Date(result.games[i].date);
+//                    var options = {
+//                        year: 'numeric',
+//                        month: 'numeric',
+//                        day: 'numeric',
+//                        weekday: 'short',
+//                        timezone: 'UTC',
+//                        hour: 'numeric',
+//                        minute: 'numeric'
+//                      };
+//                    
                     $('#form_reg_select')
-                            .append('<option value="'+result.games[i].id+'">'
-                            + date.toLocaleDateString("ru" , options)
-                            + " #" +  result.games[i].description
-                            + '<span style="display:none" id="game_ID"></span>'
+                            .append('<option value="'+result.gamesDate[i].gameId+'">'
+                            + result.gamesDate[i].gameDate
                             + '</option>'
                             );
                        
