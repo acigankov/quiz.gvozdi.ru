@@ -60,13 +60,13 @@
                             </div> 
                         </div>
                         <div class="top-line__soc d-none d-md-flex d-lg-flex ml-5">
-                            <a href="https://vk.com/gvozdipub_moscow" target="_blank" title="Мы Вконтакте">
+                            <a href="https://vk.com/gvozdiquiz" target="_blank" title="Мы Вконтакте">
                                 <img src="img/icons/icon-vk.png" alt="Мы Вконтакте" />
                             </a>
-                            <a href="https://ru-ru.facebook.com/gvozdipubmoscow/" target="_blank" title="Мы в Фейсбук">
+                            <a href="https://www.facebook.com/gvozdiquiz" target="_blank" title="Мы в Фейсбук">
                                 <img src="img/icons/icon-fb.png" alt="Мы в Фейсбук" />
                             </a>
-                            <a href="https://www.instagram.com/gvozdipub_moscow/" target="_blank" title="Мы в Инстраграм">
+                            <a href="https://www.instagram.com/gvozdiquiz/" target="_blank" title="Мы в Инстраграм">
                                 <img src="img/icons/icon-instagram.png" alt="Мы в Инстраграм" />
                             </a>
                         </div>
@@ -570,9 +570,9 @@
                         <span class="contacts-info__tel"><a href="tel:+7&nbsp;(495)&nbsp;58-58-203">+7 (495) 58-58-203</a></span>
                     </div>
                     <div class="contacts-info__soc">
-                        <a href="https://vk.com/gvozdipub_moscow" target="_blank" title="Мы Вконтакте"><i class="fab fa-vk"></i></a>
-                        <a href="https://ru-ru.facebook.com/gvozdipubmoscow/" target="_blank" title="Мы в Фейсбук"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/gvozdipub_moscow/" target="_blank" title="Мы в Инстраграм"><i class="fab fa-instagram"></i></a>
+                        <a href="https://vk.com/gvozdiquiz" target="_blank" title="Мы Вконтакте"><i class="fab fa-vk"></i></a>
+                        <a href="https://www.facebook.com/gvozdiquiz" target="_blank" title="Мы в Фейсбук"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gvozdiquiz/" target="_blank" title="Мы в Инстраграм"><i class="fab fa-instagram"></i></a>
                     </div>
 
                     <a href="img/gallery/fasad.jpg" data-fancybox="Гвозди Паб" data-caption="Гвозди Паб">
@@ -599,13 +599,13 @@
                         </div>   
                     </div>
                     <div class="top-line__soc d-none d-md-flex d-lg-flex ml-5">
-                        <a href="https://vk.com/gvozdipub_moscow" target="_blank" title="Мы Вконтакте">
+                        <a href="https://vk.com/gvozdiquiz" target="_blank" title="Мы Вконтакте">
                             <img src="img/icons/icon-vk.png" alt="Мы Вконтакте" />
                         </a>
-                        <a href="https://ru-ru.facebook.com/gvozdipubmoscow/" target="_blank" title="Мы в Фейсбук">
+                        <a href="https://www.facebook.com/gvozdiquiz" target="_blank" title="Мы в Фейсбук">
                             <img src="img/icons/icon-fb.png" alt="Мы в Фейсбук" />
                         </a>
-                        <a href="https://www.instagram.com/gvozdipub_moscow/" target="_blank" title="Мы в Инстраграм">
+                        <a href="https://www.instagram.com/gvozdiquiz/" target="_blank" title="Мы в Инстраграм">
                             <img src="img/icons/icon-instagram.png" alt="Мы в Инстраграм" />
                         </a>
                     </div>

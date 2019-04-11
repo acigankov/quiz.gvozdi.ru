@@ -23,7 +23,6 @@
         <title><?= $data['site_title']; ?></title>
     </head>
     <body>
-
         <!--button UP-->
         <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
         <!--конец button UP-->
@@ -42,13 +41,13 @@
                             </div> 
                         </div>
                         <div class="top-line__soc d-none d-md-flex d-lg-flex ml-5">
-                            <a href="https://vk.com/gvozdipub_moscow" target="_blank" title="Мы Вконтакте">
+                            <a href="https://vk.com/gvozdiquiz" target="_blank" title="Мы Вконтакте">
                                 <img src="/img/icons/icon-vk.png" alt="Мы Вконтакте" />
                             </a>
-                            <a href="https://ru-ru.facebook.com/gvozdipubmoscow/" target="_blank" title="Мы в Фейсбук">
+                            <a href="https://www.facebook.com/gvozdiquiz" target="_blank" title="Мы в Фейсбук">
                                 <img src="/img/icons/icon-fb.png" alt="Мы в Фейсбук" />
                             </a>
-                            <a href="https://www.instagram.com/gvozdipub_moscow/" target="_blank" title="Мы в Инстраграм">
+                            <a href="https://www.instagram.com/gvozdiquiz/" target="_blank" title="Мы в Инстраграм">
                                 <img src="/img/icons/icon-instagram.png" alt="Мы в Инстраграм" />
                             </a>
                         </div>
@@ -182,13 +181,13 @@
                         </div>   
                     </div>
                     <div class="top-line__soc d-none d-md-flex d-lg-flex ml-5">
-                        <a href="https://vk.com/gvozdipub_moscow" target="_blank" title="Мы Вконтакте">
+                        <a href="https://vk.com/gvozdiquiz" target="_blank" title="Мы Вконтакте">
                             <img src="/img/icons/icon-vk.png" alt="Мы Вконтакте" />
                         </a>
-                        <a href="https://ru-ru.facebook.com/gvozdipubmoscow/" target="_blank" title="Мы в Фейсбук">
+                        <a href="https://www.facebook.com/gvozdiquiz" target="_blank" title="Мы в Фейсбук">
                             <img src="/img/icons/icon-fb.png" alt="Мы в Фейсбук" />
                         </a>
-                        <a href="https://www.instagram.com/gvozdipub_moscow/" target="_blank" title="Мы в Инстраграм">
+                        <a href="https://www.instagram.com/gvozdiquiz/" target="_blank" title="Мы в Инстраграм">
                             <img src="/img/icons/icon-instagram.png" alt="Мы в Инстраграм" />
                         </a>
                     </div>
