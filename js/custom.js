@@ -305,29 +305,33 @@ $(document).ready(function () {
 
     });
    
-     $('#modal_call , #modal_reg').on('hidden.bs.modal', function () {
-            $('input').removeClass('is-valid is-invalid');
-            $('form').trigger('reset');
-            $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
-        });
-                
-                
-      if(!$('.timetable-more__btn').hasClass('more-btn-active')) {
-          $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
-      } else {
-          $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
-      }
+    $('#modal_call , #modal_reg').on('hidden.bs.modal', function () {
+        $('input').removeClass('is-valid is-invalid');
+        $('form').trigger('reset');
+        $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
+    });
+
+
+    if (!$('.timetable-more__btn').hasClass('more-btn-active')) {
+        $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+    } else {
+        $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+    }
       
                 
-       //кнопка скрытия/показа расписания игр         
+    //кнопка скрытия/показа расписания игр     
+    $('.timetable-more__btn').on('click', function () {
+        $('.timetable-more__btn').toggleClass('animated flipInX');
+    });
                 
     $('#gamestable').on('hidden.bs.collapse', function () {
-        $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
-    })
+        $('.timetable-more__btn').removeClass('animated flipInX').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+        
+    });
     
     $('#gamestable').on('shown.bs.collapse', function () {
-        $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
-    })
+        $('.timetable-more__btn').removeClass('animated flipInX').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+    });
 
 
 
