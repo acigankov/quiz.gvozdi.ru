@@ -37,13 +37,13 @@
         <div id="button-up" class="animated fadeInRightBig"><i class="fas fa-arrow-up"></i></div>
         <!--конец button UP-->
         <!--button CALL--> 
-<!--        <div class="pulse d-none d-md-block"  data-toggle="modal" data-target="#modal_call" 
+        <div class="pulse d-none d-md-block"  data-toggle="modal" data-target="#modal_call" 
               data-placement="left" title="Хотите, мы Вам перезвоним?">
             <i class="fa fa-phone" aria-hidden="true"></i>
         </div>
         <a class="pulse d-block d-md-none" href="tel:+7(495)58-58-203"><i class="fa fa-phone" aria-hidden="true"></i></a>
         
-        конец button CALL-->
+        <!--конец button CALL-->
         
         <!--header Start-->
         <header>
@@ -632,7 +632,7 @@
         <!--Custom JS for additional--> 
         <script src="/js/custom.js"></script> 
         <!--spikmi-->
-        <script type="text/javascript" src="https://spikmi.com/Widget?Id=626"></script>
+        <!--<script type="text/javascript" src="https://spikmi.com/Widget?Id=626"></script>-->
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
