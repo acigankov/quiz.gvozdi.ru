@@ -36,7 +36,7 @@ if (isset($_POST['form_call']) && !empty($_POST)) {
         $to = 'acigankov@inbox.ru, v.v.ilyin@yandex.ru, gvozdimsk1@gmail.com, gvozdibron1@yandex.ru';
         $subject = 'quiz.gvozdimoscow.ru Гость ждет звонка';
         $message = 'hello Manager! <br>' . "\r\n"
-                . $name . ' ждет звонка и просит перезвонить ему по номеру : <br>' . "\r\n"
+                . $name . ' ждет звонка и просит перезвонить по номеру : <br>' . "\r\n"
                 . $tel;
 
         // Для отправки HTML-письма должен быть установлен заголовок Content-type
