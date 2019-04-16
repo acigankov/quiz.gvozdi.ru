@@ -172,7 +172,7 @@
             <div class="container">
                 <div class="footer-line w-100 d-flex align-items-center justify-content-center justify-content-lg-between">
                     <div class="logo ">
-                        <a href="<?= $data['site_url']; ?>" title="logo">
+                        <a href="/" title="logo">
                             <img class="img-fluid" src="/img/logo.png" alt="logo">
                         </a>
                         <div class="logo__text">
