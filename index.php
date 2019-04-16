@@ -220,10 +220,16 @@
                         <?php endif ?>
                     </div>
                 </div>
-                <div class="timetable-more row justify-content-center align-items-center py-3 "> 
-                    <button class="timetable-more__btn btn" data-toggle="collapse" 
+                <div class="timetable-more row justify-content-between align-items-center py-3 px-5"> 
+                    <button class="timetable-more__btn btn" data-toggle="collapse" id="btn_timetable" 
                        data-target="#gamestable"
                        type="button">
+                        больше игр <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <button class="timetable-more__btn btn" data-toggle="collapse" id="btn_resulttable" 
+                       data-target="#resulttable"
+                       type="button">
+                        итоги игр <i class="fas fa-chevron-down"></i>
                     </button>
                 </div>
             </div>    
@@ -235,6 +241,7 @@
         <section class="gamestable container collapse" id="gamestable">
             <div class="row">
                 <div class="gamestable-content w-100">
+                    <h2 class="py-3"> Расписание игр </h2>
                     <table>
                         <tbody>
                             <tr>
@@ -259,10 +266,34 @@
                 </div>
             </div>
         </section>
+        <!--section gamestable table <end-->
 
+        <!--section resulttable start-->
 
-
-        <!--section gamestable table end-->
+        <section class="resulttable container collapse" id="resulttable">
+            <div class="row">
+                <div class="gamestable-content w-100">
+                    <h2 class="py-3"> <?= $gameResults[0]['game'] ?> сезон #<?= $gameResults[0]['description'] ?></h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <?php if (!empty($gameResults)) : ?>
+                                    <?php foreach ($gameResults as $gameResult) : ?>
+                                        <td><?= $gameResult['name']; ?> </td>
+                                        <td><?= $gameResult['points']; ?> </td>
+                                        <td><?= $gameResult['position']; ?> </td>
+                                    </tr> 
+                                <?php endforeach ?>
+                            <?php else : ?>
+                            <h3>активных игр нет</h3>
+                        <?php endif ?>
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+        </section>
+        <!--section resulttable end-->
+        
         <!--section testimonial start-->        
         <section class="testimonail">
             <div class="container">

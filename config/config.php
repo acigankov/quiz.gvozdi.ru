@@ -27,9 +27,11 @@ $limit = 3;
 getGames($limit) ? $games = getGames($limit) : $games = [] ;
 getAllGames() ? $allGames = getAllGames() : $allGames = [] ;
 getSeason() ? $seasons = getSeason() : $seasons = [];
+$gameResults = getGameResults(1) ? getGameResults(1) : [];
 $gamesGP = getGamesBySeason(1);
 $gamesMarvel = getGamesBySeason(2);
 $gamesGOT = getGamesBySeason(3);
+
 
 
 ?>

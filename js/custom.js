@@ -312,25 +312,42 @@ $(document).ready(function () {
     });
 
 
-    if (!$('.timetable-more__btn').hasClass('more-btn-active')) {
-        $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
-    } else {
-        $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
-    }
+//    if (!$('.timetable-more__btn').hasClass('more-btn-active')) {
+//        $('.timetable-more__btn').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
+//    } else {
+//        $('.timetable-more__btn').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+//    }
+//      
+    //кнопки скрытия/показа расписания игр   
+    var btn_games = $('#btn_timetable');
+    var btn_results = $('#btn_resulttable');
+    var table_games = $('#gamestable');
+    var table_results = $('#resulttable');
       
-                
-    //кнопка скрытия/показа расписания игр     
-    $('.timetable-more__btn').on('click', function () {
-        $('.timetable-more__btn').toggleClass('animated flipInX');
+      
+    $('#btn_timetable, #btn_resulttable').on('click', function () {
+       $('#gamestable, #resulttable').collapse('hide');
     });
-                
+      
+    $('#btn_timetable').on('click', function () {
+        $('#btn_timetable').toggleClass('animated flipInX');
+    });
     $('#gamestable').on('hidden.bs.collapse', function () {
-        $('.timetable-more__btn').removeClass('animated flipInX').text('больше игр').append(' <i class="fas fa-caret-down"></i>');
-        
+        $('#btn_timetable').removeClass('animated flipInX').text('больше игр').append(' <i class="fas fa-chevron-down"></i>');
     });
-    
     $('#gamestable').on('shown.bs.collapse', function () {
-        $('.timetable-more__btn').removeClass('animated flipInX').text('меньше игр').append(' <i class="fas fa-caret-up"></i>');
+        $('#btn_timetable').removeClass('animated flipInX').text('меньше игр').append(' <i class="fas fa-chevron-up"></i>');
+    });
+////    
+////    
+    $('#btn_resulttable').on('click', function () {
+        $('#btn_resulttable').toggleClass('animated flipInX');
+    });
+    $('#resulttable').on('hidden.bs.collapse', function () {
+        $('#btn_resulttable').removeClass('animated flipInX').text('итоги игр').append(' <i class="fas fa-chevron-down"></i>');
+    });
+    $('#resulttable').on('shown.bs.collapse', function () {
+        $('#btn_resulttable').removeClass('animated flipInX').text('итоги игр').append(' <i class="fas fa-chevron-up"></i>');
     });
 
 

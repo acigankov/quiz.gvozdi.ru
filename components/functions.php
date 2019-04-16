@@ -155,8 +155,6 @@ function getAllGames() {
             WHERE g.active = 1  
             ORDER BY g.start_date";
         
-        
-        
         $result = $db->prepare($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();       
@@ -204,6 +202,43 @@ function getGamesBySeason($season) {
 
         if($games){
             return $games;
+        }
+    }
+    return false;
+}
+
+/**
+ * Достает результаты игры по id игры
+ * @param int $id row game id
+ * @return array or false
+ */
+
+function getGameResults($id) {
+
+    if ($id) {
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT 
+            t.name as name, 
+            t.points as points, 
+            t.position as position,
+            g.name as game,
+            g.description as description
+            FROM teams as t
+            LEFT JOIN games as g on t.gameId = g.id
+            WHERE t.gameId = :id 
+            AND points > 0
+            ORDER BY position";
+        
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->execute();       
+        $results = $result->fetchAll();
+
+        if($results){
+            return $results;
         }
     }
     return false;

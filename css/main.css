@@ -426,7 +426,15 @@ a.top-heading__btn,a.top-heading__btn:focus {
     padding: 0.7rem 1.8rem;
 }
 
+/*.timetable-more__btn i {
+}
 
+.timetable-more__btn>i {
+  transition: .3s transform ease-in-out;
+}
+.timetable-more__btn.collapsed>i {
+  transform: rotate(180deg);
+}*/
 
 /*section timetable end*/
 
@@ -437,6 +445,11 @@ a.top-heading__btn,a.top-heading__btn:focus {
     background-color: #ffcc00;
     padding: 0 1.2rem;
 }
+
+.gamestable-content h2 {
+    text-transform: capitalize;
+}
+
 .gamestable-content table {
     width: 100%;
     border-collapse: separate;

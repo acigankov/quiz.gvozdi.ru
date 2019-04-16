@@ -2,7 +2,7 @@
 
 return array(
     'host'      => 'localhost',
-    'dbname'    => 'quiz',
+    'dbname'    => 'quiz_copy_prod',
     'user'      => 'root',
     'password'  => ''
 //    'host'      => 'mysql-105942.srv.hoster.ru',
