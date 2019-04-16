@@ -301,6 +301,21 @@ a.top-heading__btn,a.top-heading__btn:focus {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
 }
+
+.top-heading__badge {
+    position: absolute;
+    right:5%;
+    top: 5%;    
+    padding: 1rem;
+    min-width: 200px;
+    text-transform: capitalize;
+    color: #222;
+    font-size: 1.2rem;
+    font-family: 'Montserrat-Bold' , sans-serif;
+    background-color: #ffcc00;
+    text-align: center;
+}
+
 /*header end*/
 
 /*section how start*/
