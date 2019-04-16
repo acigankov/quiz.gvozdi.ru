@@ -50,7 +50,10 @@
     /*xs header end*/
     
     /*xs timetable start*/
-   
+    .timetable-more__btn {
+        font-size: 0.65rem;
+        padding: 0.5rem 0.6rem;
+    }
      
     /*xs timetable end*/
     
@@ -77,9 +80,9 @@
     }
     
     .advantage-item__text {
-    font-size: 1rem;
-    padding: .9rem;
-    text-align: center;
+        font-size: 1rem;
+        padding: .9rem;
+        text-align: center;
     }
     
     /*xs advantage end*/
@@ -115,6 +118,8 @@
 }    
 /*sm small*/
 @media (min-width: 576px)  {
+    
+    
     .top-heading__wrapper {
         background: url(../img/games/banner_md.jpg) #ffcc00 no-repeat;
         min-height: 400px;
@@ -168,6 +173,14 @@
         border: 1px solid #fff;
         padding: 0.7rem 1.8rem;
     }
+    
+    .timetable-more__btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+        color: #222;
+    }
+    
+    
     /*md gamestable end*/
     
     
