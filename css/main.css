@@ -543,8 +543,36 @@ a.top-heading__btn,a.top-heading__btn:focus {
 }
 /*section testimonial end*/
 
-/*section advantage start*/
+/*section news start*/
 
+.news-block {
+    background: #ffb31c;
+    padding: 1rem 2rem;
+}
+
+.news-block a {
+    font-size: 1.1rem;
+    font-family: 'Montserrat-Bold' , sans-serif;
+}
+.news-block a:hover {
+    text-decoration: underline;
+  
+}
+
+.news-block ul li, 
+.news-modal ul li {
+    list-style: initial;
+}
+
+.news-block h4, 
+.news-modal h4 {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+} 
+/*section news end*/
+
+/*section advantage start*/
 .advantage__title {
     min-height: 150px;
     background: #c6c5c4;
@@ -972,9 +1000,9 @@ a.contacts-content__button:focus{
     min-width: 46px;
 }
 
-.modal-body h4 {
-    font-size: 1.3rem;
-    text-transform: uppercase;
+.modal-content {
+    background-color: #ffb31c;
 }
+
 
 /*bootstrap forms end*/

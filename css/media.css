@@ -51,8 +51,8 @@
     
     /*xs timetable start*/
     .timetable-more__btn {
-        font-size: 0.65rem;
-        padding: 0.5rem 0.6rem;
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
     }
      
     /*xs timetable end*/
@@ -148,6 +148,7 @@
     .team-item {
         padding: 2rem;
     }
+    
     .team-item__name {
         font-family: 'Montserrat-Bold' , sans-serif;
         color: #ffcc00;    

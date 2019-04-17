@@ -170,7 +170,7 @@
                         <div class="how__item text-center text-uppercase col-lg-4 col-md-6 col-sm-12 ">
                             <img src="img/icons/how_ticket.png" alt="" class="img-fluid" />
                             <hr>
-                            <span>билет на игру 500р с участника</span>
+                            <span>500р с участника <span style="color:#FCC601">наличными</span></span>
                         </div>
                         <div class="how__item text-center text-uppercase col-lg-4 col-md-6 col-sm-12 ">
                             <img src="img/icons/how_time.png" alt="" class="img-fluid" />
@@ -220,7 +220,7 @@
                         <?php endif ?>
                     </div>
                 </div>
-                <div class="timetable-more row justify-content-between align-items-center py-3 px-5"> 
+                <div class="timetable-more row justify-content-between align-items-center py-3 px-3 px-md-5"> 
                     <button class="timetable-more__btn btn" data-toggle="collapse" id="btn_timetable" 
                        data-target="#gamestable"
                        type="button">
@@ -389,7 +389,46 @@
             </div>
         </section>
         <!--section testimonial end-->
-
+        
+        <!--section news start-->
+        <section class="news ">
+            <div class="container">
+                <div class="row">
+                    <div class="news__title section-title bgr-yellow">
+                        <h2>Новости</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="news-block">
+                        <div class="news-text">
+                            <h3 class="text-uppercase py-3">Гарри Поттер Сезон #1.1. Итоги</h3>
+                            <p>Благодарим всех, кто принял участие во вчерашней игре первого сезона по Гарри Поттеру!
+                                Мы обработали анкеты обратной связи и уже можем подвести какие-то итоги.
+                            </p>
+                            <h4>Извинения</h4>
+                            <p>Прежде всего мы хотели бы извиниться за задержки по ходу игры:</p>
+                            <ul>
+                                <li>в следующий раз мы начнем вовремя, но, со своей стороны, просим команды 
+                                    приезжать не позже 19:30 - 19:45, чтобы успеть рассадить всех по местам до начала 
+                                    первого тура;
+                                </li>
+                                <li>мы нашли способ ускорить подсчёт результатов, так что сможем выводить 
+                                    промежуточные таблицы в перерывах, чтобы вы оперативно отслеживали своё место в 
+                                    общем зачёте;
+                                </li>
+                                <li>мы учли ваши замечания по текстовкам – будет более оперативное перечисление команд, 
+                                    сокращённое объяснение правил, меньше подводов к вопросам.
+                                </li>
+                            </ul>
+                            <p>Всё это позволит уложиться в заявленный тайминг.</p>
+                        </div>
+                        <a href="" class="news-block__readmore" data-toggle="modal" data-target="#modal_news">Читать полностью <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section news start-->
+        
         <!--section advantage start-->
         <section class="advantage">
             <div class="container">
@@ -651,6 +690,7 @@
         <?php include_once 'template/modal_oferta.php'; ?>    
         <?php include_once 'template/modal_call.php'; ?>    
         <?php include_once 'template/modal_reg.php'; ?>    
+        <?php include_once 'template/modal_news.php'; ?>    
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="/js/jquery-3.3.1.min.js"></script>
