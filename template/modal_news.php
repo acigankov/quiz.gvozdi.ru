@@ -4,13 +4,16 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modal_newsTitle">ГАРРИ ПОТТЕР СЕЗОН #1.1. ИТОГИ</h5>
+                <!--<h5 class="modal-title" id="modal_newsTitle">ГАРРИ ПОТТЕР СЕЗОН #1.1. ИТОГИ</h5>-->
+                <h5 class="modal-title" id="modal_newsTitle"><?= $news[0]['title'] ?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body news-modal">
-                <p>Благодарим всех, кто принял участие во вчерашней игре первого сезона по Гарри Поттеру!
+                
+              <?= $news[0]['text'] ?>
+<!--                <p>Благодарим всех, кто принял участие во вчерашней игре первого сезона по Гарри Поттеру!
                     Мы обработали анкеты обратной связи и уже можем подвести какие-то итоги.
                 </p>
                 <h4>Извинения</h4>
@@ -126,7 +129,7 @@
                 </p>
                 
                 <p>PPS: <mark>Обработанные фоточки</mark> с первой игры появятся до конца недели.
-                </p>
+                </p>-->
                 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Я прочитал</button>
