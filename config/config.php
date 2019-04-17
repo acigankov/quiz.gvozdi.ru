@@ -24,14 +24,13 @@ $data = [
 ];
 
 $limit = 3;
-getGames($limit) ? $games = getGames($limit) : $games = [] ;
-getAllGames() ? $allGames = getAllGames() : $allGames = [] ;
-getSeason() ? $seasons = getSeason() : $seasons = [];
+$games = getGames($limit) ? getGames($limit) : [];
+$allGames = getAllGames() ? getAllGames() : [] ;
+$seasons = getSeason() ? getSeason() : [];
 $gameResults = getGameResults(1) ? getGameResults(1) : [];
+$news = getNews() ? getNews() : [];
 $gamesGP = getGamesBySeason(1);
 $gamesMarvel = getGamesBySeason(2);
 $gamesGOT = getGamesBySeason(3);
-
-
 
 ?>

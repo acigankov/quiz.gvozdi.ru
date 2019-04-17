@@ -135,9 +135,7 @@ function getGames($limit) {
  */
 
 function getAllGames() {
-
     
-
         $db = DB::getConnection();
 
         $sql = "SELECT 
@@ -393,4 +391,29 @@ function saveUser($name, $tel) {
     }
     return false;
     
+}
+
+/**
+ * Достает новости
+ * @return array or false
+ */
+
+function getNews() {
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT *
+            FROM news
+            ORDER BY date_add desc";
+        
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();       
+        $news = $result->fetchAll();
+
+        if($news){
+            return $news;
+        }
+        
+    return false;
 }
