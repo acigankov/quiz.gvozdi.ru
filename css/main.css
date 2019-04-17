@@ -556,7 +556,6 @@ a.top-heading__btn,a.top-heading__btn:focus {
 }
 .news-block a:hover {
     text-decoration: underline;
-  
 }
 
 .news-block ul li, 
@@ -999,7 +998,6 @@ a.contacts-content__button:focus{
     justify-content: center;
     min-width: 46px;
 }
-
 
 
 /*bootstrap forms end*/

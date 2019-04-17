@@ -34,5 +34,3 @@ $gamesMarvel = getGamesBySeason(2);
 $gamesGOT = getGamesBySeason(3);
 
 ?>
-
-</pre>

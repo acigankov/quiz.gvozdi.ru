@@ -130,7 +130,6 @@
 /*md medium*/
 @media (min-width: 768px)  {
     
-
     .top-heading__wrapper {
         background: url(../img/games/banner_big.jpg) #ffcc00 no-repeat 100% 100% / cover;
         min-height: 400px;
@@ -239,11 +238,8 @@
         font-family: 'Montserrat-Black' , sans-serif;
     }
 
-    
     .top-heading__desc {
-        /*padding: 0 15%;*/
         font-size: 1.7em;
-        /*padding-top: 10rem;*/
     }
     
     .top-heading__wrapper {
@@ -264,12 +260,8 @@
     }
 
     /*lg timetable end*/
-    
-    
-    /**/
-    
+
     /*lg testimonial start*/
-    
     .testimonial-item {
         flex-direction: row;
         text-align: left;

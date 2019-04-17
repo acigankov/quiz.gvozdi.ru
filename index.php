@@ -401,8 +401,8 @@
                 <div class="row">
                     <div class="news-block">
                         <div class="news-text">
-                      <h3 class="text-uppercase py-3"><?= $news[0]['title'] ?></h3>
-                            <?= $news[0]['small_text'] ?>
+                        <h3 class="text-uppercase py-3"><?= $news[0]['title']; ?></h3>
+                            <?= $news[0]['small_text']; ?>
                         </div>
                         <a href="" class="news-block__readmore" data-toggle="modal" data-target="#modal_news">Читать полностью <i class="fas fa-chevron-right"></i></a>
                     </div>
