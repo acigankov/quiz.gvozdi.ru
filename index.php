@@ -101,7 +101,7 @@
                                 <?php if($games): ?>
                                     <?php foreach ($games as $game): ?>
                                         <div class="carousel-item" >
-                                            <div style="background: url(<?= $game['banner']; ?>) #222 100% 100% / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
+                                            <div style="background: url(<?= $game['banner']; ?>) #222 center center / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
                                                 <div class="top-heading__badge">сезон #<?= $game['description'] ?></div>
                                                 <div class="top-heading__slider-text text-center flex-column">
 
