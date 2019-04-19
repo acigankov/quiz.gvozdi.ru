@@ -417,3 +417,25 @@ function getNews() {
         
     return false;
 }
+
+/**
+ * Для конверсии рассылок, сколько раз ссылку дернули, столько записей
+ * @param string $message, string $identifier
+ * @return bool
+ */
+function setUserFromSmsLinkOuter($message, $identifier) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'INSERT INTO outer_links (message, identifier) VALUES (:message, :identifier)';
+    
+    $result = $db->prepare($sql);
+    $result->bindParam(':message', $message, PDO::PARAM_STR);
+    $result->bindParam(':identifier', $identifier, PDO::PARAM_STR);
+    
+    if($result->execute()) {
+        return true;
+    }
+    return false;
+    
+}
