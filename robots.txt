@@ -1,0 +1,15 @@
+User-agent: *
+
+Disallow: /components/
+
+Disallow: /config/
+
+Disallow: /in/
+
+Disallow: /js/
+
+Disallow: /libs/
+
+Disallow: /template/
+
+Host: quiz.gvozdimoscow.ru
