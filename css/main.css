@@ -545,6 +545,11 @@ a.top-heading__btn,a.top-heading__btn:focus {
 
 /*section news start*/
 
+.news__title {
+    background: #222;
+    color: #ffcc00;;
+}
+
 .news-block {
     background: #ffb31c;
     padding: 1rem 2rem;

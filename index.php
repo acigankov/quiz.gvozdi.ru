@@ -7,7 +7,7 @@
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="<?= $data['head_keywords']; ?>" />
         <meta name="description" content="<?= $data['head_description']; ?>" />
-        
+        <meta name="yandex-verification" content="c5f4e63d0f0a81db" />
         <meta property="og:title" content="<?= $data['site_title']; ?>">
         <meta property="og:site_name" content="<?= $data['site_title']; ?>">
         <meta property="og:url" content="<?= $data['site_url']; ?>">
@@ -182,6 +182,50 @@
             </div>
         </section>
         <!--section how end-->
+        
+        <!--section advantage start-->
+        <section class="advantage">
+            <div class="container">
+                <div class="row">
+                    <div class="advantage__title section-title">
+                        <h2>наши преимущества</h2>
+                    </div>
+                    <div class="advanage__content w-100">
+                        <div class="advantage-item d-flex align-items-center">
+                            <div class="advantage-item__badge">1</div>
+                            <span class="advantage-item__text">
+                                Только у нас разыгрываются реальные денежные призы для победителей и призеров!
+                            </span>
+                        </div>
+                        <div class="advantage-item d-flex align-items-center">
+                            <div class="advantage-item__badge">2</div>
+                            <span class="advantage-item__text">
+                                Только у нас самые демократичные цены на еду и напитки.
+                            </span>
+                        </div>
+                        <div class="advantage-item d-flex align-items-center">
+                            <div class="advantage-item__badge">3</div>
+                            <span class="advantage-item__text">
+                                Чем больше команд, тем больше призовой фонд!
+                            </span>
+                        </div>
+                        <div class="advantage-item d-flex align-items-center">
+                            <div class="advantage-item__badge">4</div>
+                            <span class="advantage-item__text">
+                                Только у нас шоу-программа с косплеерами и фотозонами
+                            </span>
+                        </div>
+                        <div class="advantage-item d-flex align-items-center">
+                            <div class="advantage-item__badge">5</div>
+                            <span class="advantage-item__text">
+                                ДА МЫ ВООБЩЕ ОГВОЗДЕННЫЕ! Приходи и убедись!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section advantage end-->
 
         <!--section timetable start-->
         <section class="timetable">
@@ -293,103 +337,6 @@
             </div>
         </section>
         <!--section resulttable end-->
-        
-        <!--section testimonial start-->        
-        <section class="testimonail">
-            <div class="container">
-                <div class="row">
-                    <div class="testimonial__title section-title">
-                        <h2>отзывы</h2>
-                    </div>
-                    <div class="testimonial__content d-flex w-100">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="testimonial-item">
-                                    <div class="testimonial-item__img">
-                                        <img src="img/testimonials/f4.jpg" alt="foto" class="img-fluid img-hover-yellow" />
-                                    </div>
-                                    <div class="testimonial-item__content">
-                                        <span class="testimonial-item__date d-block">
-                                            04 марта 2019
-                                        </span>
-                                        <h3 class="testimonial-item__name">
-                                            @viksdf
-                                        </h3>
-                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BulD-ibFgn2/?utm_source=ig_share_sheet&igshid=4559chfpi7dr" target="_blank"  class="testimonial-item__text d-block">
-                                            Уже больше года играем в пабе Гвозди в разные квизы. 
-                                            Собираемся большой компанией друзей, всегда весело и задорно. 
-                                            Ребята молодцы!
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="testimonial-item">
-                                    <div class="testimonial-item__img">
-                                        <img src="img/testimonials/f3.jpg" alt="foto" class="img-fluid img-hover-yellow" />
-                                    </div>
-                                    <div class="testimonial-item__content">
-                                        <span class="testimonial-item__date d-block">
-                                            25 февраля 2019
-                                        </span>
-                                        <h3 class="testimonial-item__name">
-                                            @ilya_obivan
-                                        </h3>
-                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BuTEZd_lwfm/?utm_source=ig_share_sheet&igshid=1epj7wvkv1yp" target="_blank"  class="testimonial-item__text d-block">
-                                            Организация всегда на высшем уровне. Брависсимо!
-                                            Цены на еду и напитки весьма демократичные. 
-                                            Вопросы интересные. Ведущий вообще огонь
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="testimonial-item">
-                                    <div class="testimonial-item__img">
-                                        <img src="img/testimonials/f2.jpg" alt="foto" class="img-fluid img-hover-yellow" />
-                                    </div>
-                                    <div class="testimonial-item__content">
-                                        <span class="testimonial-item__date d-block">
-                                            18 февраля 2019
-                                        </span>
-                                        <h3 class="testimonial-item__name">
-                                            @rinafedotkina
-                                        </h3>
-                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BuBAB7nFBxh/?utm_source=ig_share_sheet&igshid=19qvmv5tm2xgu" target="_blank"  class="testimonial-item__link d-block">
-                                            Были на играх, посвященных Гарри Поттеру. 
-                                            Очень понравилось. Просто очень крутой квиз,
-                                            организация на пятерку, да еще и еда вкуснецкая
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="testimonial-item">
-                                    <div class="testimonial-item__img">
-                                        <img src="img/testimonials/f1.jpg" alt="foto" class="img-fluid img-hover-yellow" />
-                                    </div>
-                                    <div class="testimonial-item__content">
-                                        <span class="testimonial-item__date d-block">
-                                            04 февраля 2019
-                                        </span>
-                                        <h3 class="testimonial-item__name">
-                                            @natasha.f3
-                                        </h3>
-                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/Btc7HstFPuY/?utm_source=ig_share_sheet&igshid=h313w6f6ys0r" target="_blank" class="testimonial-item__link d-block">
-                                            Крутой вариант провести время с друзьями. 
-                                            Эмоции зашкаливают. Рекомендую всем, кто хочет
-                                            получить море позитивных эмоций.
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--section testimonial end-->
-        
         <!--section news start-->
         <section class="news ">
             <div class="container">
@@ -410,80 +357,6 @@
             </div>
         </section>
         <!--section news start-->
-        
-        <!--section advantage start-->
-        <section class="advantage">
-            <div class="container">
-                <div class="row">
-                    <div class="advantage__title section-title">
-                        <h2>наши преимущества</h2>
-                    </div>
-                    <div class="advanage__content w-100">
-                        <div class="advantage-item d-flex align-items-center">
-                            <div class="advantage-item__badge">1</div>
-                            <span class="advantage-item__text">
-                                Только у нас разыгрываются реальные денежные призы для победителей и призеров!
-                            </span>
-                        </div>
-                        <div class="advantage-item d-flex align-items-center">
-                            <div class="advantage-item__badge">2</div>
-                            <span class="advantage-item__text">
-                                Только у нас самые демократичные цены на еду и напитки.
-                            </span>
-                        </div>
-                        <div class="advantage-item d-flex align-items-center">
-                            <div class="advantage-item__badge">3</div>
-                            <span class="advantage-item__text">
-                                Чем больше команд, тем больше призовой фонд!
-                            </span>
-                        </div>
-                        <div class="advantage-item d-flex align-items-center">
-                            <div class="advantage-item__badge">4</div>
-                            <span class="advantage-item__text">
-                                Только у нас шоу-программа с косплеерами и фотозонами
-                            </span>
-                        </div>
-                        <div class="advantage-item d-flex align-items-center">
-                            <div class="advantage-item__badge">5</div>
-                            <span class="advantage-item__text">
-                                ДА МЫ ВООБЩЕ ОГВОЗДЕННЫЕ! Приходи и убедись!
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-fotos row">
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                    <div class="advantage-fotos__item col-12 col-md-6 col-lg-3 p-0 m-0">
-                        <img src="img/gallery/4.jpg" alt="foto" class="img-fluid" />
-                    </div>
-                </div>
-                <div class="advantage-footer w-100 bgr-yellow">
-                    <div class="advantage-footer__title">Фотоотчет от 20 марта</div>
-                    <div class="advantage-footer__text text-uppercase">гарри поттер</div>
-                </div>
-            </div>
-        </section>
-        <!--section advantage end-->
 
         <!--section team start-->
         <section class="team">
@@ -588,6 +461,102 @@
             </div>
         </section>
         <!--section where end-->
+        
+        <!--section testimonial start-->        
+        <section class="testimonail">
+            <div class="container">
+                <div class="row">
+                    <div class="testimonial__title section-title">
+                        <h2>отзывы</h2>
+                    </div>
+                    <div class="testimonial__content d-flex w-100">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-item__img">
+                                        <img src="img/testimonials/f4.jpg" alt="foto" class="img-fluid img-hover-yellow" />
+                                    </div>
+                                    <div class="testimonial-item__content">
+                                        <span class="testimonial-item__date d-block">
+                                            04 марта 2019
+                                        </span>
+                                        <h3 class="testimonial-item__name">
+                                            @viksdf
+                                        </h3>
+                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BulD-ibFgn2/?utm_source=ig_share_sheet&igshid=4559chfpi7dr" target="_blank"  class="testimonial-item__text d-block">
+                                            Уже больше года играем в пабе Гвозди в разные квизы. 
+                                            Собираемся большой компанией друзей, всегда весело и задорно. 
+                                            Ребята молодцы!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-item__img">
+                                        <img src="img/testimonials/f3.jpg" alt="foto" class="img-fluid img-hover-yellow" />
+                                    </div>
+                                    <div class="testimonial-item__content">
+                                        <span class="testimonial-item__date d-block">
+                                            25 февраля 2019
+                                        </span>
+                                        <h3 class="testimonial-item__name">
+                                            @ilya_obivan
+                                        </h3>
+                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BuTEZd_lwfm/?utm_source=ig_share_sheet&igshid=1epj7wvkv1yp" target="_blank"  class="testimonial-item__text d-block">
+                                            Организация всегда на высшем уровне. Брависсимо!
+                                            Цены на еду и напитки весьма демократичные. 
+                                            Вопросы интересные. Ведущий вообще огонь
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-item__img">
+                                        <img src="img/testimonials/f2.jpg" alt="foto" class="img-fluid img-hover-yellow" />
+                                    </div>
+                                    <div class="testimonial-item__content">
+                                        <span class="testimonial-item__date d-block">
+                                            18 февраля 2019
+                                        </span>
+                                        <h3 class="testimonial-item__name">
+                                            @rinafedotkina
+                                        </h3>
+                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/BuBAB7nFBxh/?utm_source=ig_share_sheet&igshid=19qvmv5tm2xgu" target="_blank"  class="testimonial-item__link d-block">
+                                            Были на играх, посвященных Гарри Поттеру. 
+                                            Очень понравилось. Просто очень крутой квиз,
+                                            организация на пятерку, да еще и еда вкуснецкая
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-item__img">
+                                        <img src="img/testimonials/f1.jpg" alt="foto" class="img-fluid img-hover-yellow" />
+                                    </div>
+                                    <div class="testimonial-item__content">
+                                        <span class="testimonial-item__date d-block">
+                                            04 февраля 2019
+                                        </span>
+                                        <h3 class="testimonial-item__name">
+                                            @natasha.f3
+                                        </h3>
+                                        <a href="https://www.instagram.com/gvozdipub_moscow/p/Btc7HstFPuY/?utm_source=ig_share_sheet&igshid=h313w6f6ys0r" target="_blank" class="testimonial-item__link d-block">
+                                            Крутой вариант провести время с друзьями. 
+                                            Эмоции зашкаливают. Рекомендую всем, кто хочет
+                                            получить море позитивных эмоций.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section testimonial end-->
 
         <!--section contacts start-->
         <section class="contacts">
