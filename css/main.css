@@ -643,6 +643,20 @@ a.top-heading__btn,a.top-heading__btn:focus {
     opacity: 0.9;
 }
 
+.foto__link {
+    padding: 1rem;
+    justify-content: end;
+}
+
+.foto__link a {
+    color: #222;
+    font-family: 'Montserrat-Bold' , sans-serif;
+}
+
+.foto__link a:hover {
+    text-decoration: underline;
+}
+
 /*section foto end*/
 
 
