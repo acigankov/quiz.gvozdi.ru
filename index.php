@@ -337,6 +337,7 @@
             </div>
         </section>
         <!--section resulttable end-->
+        
         <!--section news start-->
         <section class="news ">
             <div class="container">
@@ -356,7 +357,63 @@
                 </div>
             </div>
         </section>
-        <!--section news start-->
+        <!--section news end-->
+        
+        <!--section foto start-->
+        <section class="foto">
+            <div class="container">
+                <div class="row">
+                    <div class="foto__title section-title bgr-yellow">
+                        <h2>фотоотчет</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="foto-content w100 d-flex flex-wrap">
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/1.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/1.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/2.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/2.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/3.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/3.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/4.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/4.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/5.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/5.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/6.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/6.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/7.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/7.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                        <div class="foto-content__item">
+                            <a href="img/gallery/gp15042019/8.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp15042019/8.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            </a>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section foto end-->
 
         <!--section team start-->
         <section class="team">

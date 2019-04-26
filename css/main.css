@@ -632,6 +632,20 @@ a.top-heading__btn,a.top-heading__btn:focus {
 }
 /*section advantage end*/
 
+/*section foto start*/
+
+.foto-content__item {
+    flex-basis: 25%;
+}
+
+
+.foto-content__item:hover {
+    opacity: 0.9;
+}
+
+/*section foto end*/
+
+
 /*section team start*/
 .team__title {
     min-height: 150px;

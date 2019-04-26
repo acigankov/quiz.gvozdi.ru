@@ -110,9 +110,15 @@
     
     /*xs gamestable  end*/
     
-    /*xs footer start*/
+    /*xs foto start*/
     
-
+    .foto-content__item {
+        flex-basis: 100%;
+    }
+    
+    /*xs foto end*/
+    
+    /*xs footer start*/
     /*xs footer end*/
     
 }    
@@ -125,6 +131,14 @@
         min-height: 400px;
         background-size: 100%;
     }
+    
+    /*xs foto start*/
+
+    .foto-content__item {
+        flex-basis: 50%;
+    }
+
+    /*xs foto end*/
 }
 
 /*md medium*/
@@ -182,6 +196,14 @@
     
     
     /*md gamestable end*/
+    
+    /*xs foto start*/
+
+    .foto-content__item {
+        flex-basis: 25%;
+    }
+
+    /*xs foto end*/
     
     
     /*md footer start*/
