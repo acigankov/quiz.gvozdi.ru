@@ -57,7 +57,7 @@ if (isset($_POST['form_call']) && !empty($_POST)) {
 }
 
 
-//форма брони
+//форма регистрации
 elseif (isset($_POST['form_reg']) && !empty($_POST)) {
 
     //команда
@@ -137,7 +137,25 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
     }
     
     //сохраняем чувака и команду
-    if (saveTeam($team, $captain, $gamers_qnt, $tel_for_bd, $email, $gameId)) {
+        
+    $team_token = uniqid();
+    
+    if (saveTeam($team, $captain, $gamers_qnt, $tel_for_bd, $email, $gameId, $team_token)) {
+        
+        //генерируем ссылку.
+        
+        $teamId = getTeamIdByToken($team_token);
+        
+        $link_qst = $_SERVER['SERVER_NAME'] . '/in/qst.php?'
+                . 'qstnum=1'
+                . '&'
+                . 'gameid=' . $gameId
+                . '&'
+                . 'teamid=' . $teamId 
+                . '&'
+                . 'tt=' . $team_token
+                ;
+                
         //достаем данные для отправки уведомлений
         $game_for_mail = getGameForMail($gameId);
         $game = $game_for_mail['name'];
@@ -157,7 +175,8 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
                 . 'Капитан : ' . $captain . ' <br>' . "\r\n"
                 . 'Кол-во игроков : ' . $gamers_qnt . ' <br>' . "\r\n"
                 . 'Телефон  : ' . $tel . ' <br>' . "\r\n"
-                . 'Email : ' . $email . ' <br>' . "\r\n";
+                . 'Email : ' . $email . ' <br>' . "\r\n"
+                . 'Ссылко : ' . $link_qst . ' <br>' . "\r\n";
 
 // Для отправки HTML-письма должен быть установлен заголовок Content-type
         $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .
@@ -170,9 +189,6 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
 
 
         if (mail($to, $subject, $message, $headers)) {
-            
-
-
             $to = $email;
             $subject = 'Гвоздатый Квиз. Регистрация на игру';
 
@@ -230,7 +246,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
             
             if (mail($to, $subject, $message, $headers)) {
                 unset($_POST);
-                $result = "Спасибо за регистрацию , капитан $captain , ждем твою команду на игру!";
+                $result = "Спасибо за регистрацию , капитан $captain , ждем твою команду на игру! Проверь почту :)";
                 echo json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
             }
             else {

@@ -349,25 +349,27 @@ function getGameForMail ($id) {
  * @return bool
  */
 
-function saveTeam ($team,$captain,$gamers,$tel,$email,$gameId) {
+function saveTeam ($team,$captain,$gamers,$tel,$email,$gameId, $team_token) {
     
     $db = DB::getConnection();
     
     $sql = 'INSERT INTO users (name, tel, email) VALUES (:captain, :tel, :email); 
             SET @lastID := LAST_INSERT_ID(); 
-            INSERT INTO teams (name, captainID, gamers, gameId) VALUES (:team, @lastID, :gamers, :gameId );';
+            INSERT INTO teams (name, captainID, gamers, gameId, team_token) VALUES (:team, @lastID, :gamers, :gameId, :team_token );';
     
     $result = $db->prepare($sql);
-    $result->bindParam(':captain', $captain, PDO::PARAM_INT);
+    $result->bindParam(':captain', $captain, PDO::PARAM_STR);
     $result->bindParam(':tel', $tel, PDO::PARAM_STR);
     $result->bindParam(':email', $email, PDO::PARAM_STR);
     $result->bindParam(':team', $team, PDO::PARAM_STR);
     $result->bindParam(':gamers', $gamers, PDO::PARAM_INT);
     $result->bindParam(':gameId', $gameId, PDO::PARAM_INT);
+    $result->bindParam(':team_token', $team_token, PDO::PARAM_STR);
     
     if($result->execute()) {
         return true;
     }
+    
     return false;
 }
 
@@ -432,6 +434,129 @@ function setUserFromSmsLinkOuter($message, $identifier) {
     $result = $db->prepare($sql);
     $result->bindParam(':message', $message, PDO::PARAM_STR);
     $result->bindParam(':identifier', $identifier, PDO::PARAM_STR);
+    
+    if($result->execute()) {
+        return true;
+    }
+    return false;
+    
+}
+
+/**
+ * Получить ID команды по ее токену.
+ * @param string $token 
+ * @return int
+ */
+
+function getTeamIdByToken($token) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'SELECT id FROM teams WHERE team_token = :token';
+    
+    $result = $db->prepare($sql);
+    $result->bindParam(':token', $token, PDO::PARAM_STR);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+            
+    $teamId = $result->fetchColumn();
+    
+    if ($teamId) {
+        return $teamId;
+    }
+          
+    return false;
+    
+}
+
+/**
+ * Проверить регистрацию команды по токену и teamid
+ * @param string $token , int $teamid
+ * @return int
+ */
+
+function checkTeamRegistration($gameid, $teamid, $token) {
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT *
+            FROM teams
+            WHERE id = :teamid AND
+            gameId = :gameid AND
+            team_token = :token
+            LIMIT 1";
+        
+        $result = $db->prepare($sql);
+        $result->bindParam(':teamid', $teamid, PDO::PARAM_INT);
+        $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+        $result->bindParam(':token', $token, PDO::PARAM_STR);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+                
+        if($result->fetch()) {
+            return true;
+        }       
+        
+        return false;
+}
+
+
+/**
+ * Проверить ответ команды по токену и teamid
+ * @param string $token , int $teamid
+ * @return int
+ */
+
+function checkTeamAnswer($qstnum, $gameid, $teamid, $token) {
+
+        $db = DB::getConnection();
+
+        $sql = "SELECT *
+            FROM additional_question
+            WHERE qst_number = :qstnum  AND
+            gameId = :gameid            AND
+            teamid = :teamid           AND
+            team_token = :token         AND
+            answer IS NOT NULL";
+        
+        $result = $db->prepare($sql);
+        $result->bindParam(':qstnum', $qstnum, PDO::PARAM_INT);
+        $result->bindParam(':teamid', $teamid, PDO::PARAM_INT);
+        $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+        $result->bindParam(':token', $token, PDO::PARAM_STR);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+                
+        if($result->fetch()) {
+            return true;
+        }       
+        
+        return false;
+}
+
+//$qstid = $_GET['qstid'];
+//    $gameid = $_GET['gameid'];
+//    $teamid = $_GET['teamid'];
+//    $team_token = $_GET['tt'];  
+
+/**
+ * Сохранить ответ команды по доп ссылки
+ * @param int $qstid, int $gameid, int $teamid, string $team_token, int $answer
+ * @return bool
+ */
+function saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer) {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'INSERT INTO additional_question (qst_number, gameid, teamid, team_token, answer) '
+            . 'VALUES (:qst_number, :gameid, :teamid, :team_token, :answer)';
+    
+    $result = $db->prepare($sql);
+    $result->bindParam(':qst_number', $qstnum, PDO::PARAM_INT);
+    $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+    $result->bindParam(':teamid', $teamid, PDO::PARAM_INT);
+    $result->bindParam(':team_token', $team_token, PDO::PARAM_STR);
+    $result->bindParam(':answer', $answer, PDO::PARAM_INT);
     
     if($result->execute()) {
         return true;

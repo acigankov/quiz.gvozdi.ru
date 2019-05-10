@@ -22,7 +22,7 @@
         <!--Fancybox css-->
         <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
         <!-- Animate Css-->
-        <link rel="stylesheet" href="../css/animate.css" />
+        <link rel="stylesheet" href="/css/animate.css" />
         <!-- Main Css -->
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/media.css">
