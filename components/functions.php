@@ -513,10 +513,11 @@ function checkTeamAnswer($qstnum, $gameid, $teamid, $token) {
 
         $sql = "SELECT *
             FROM additional_question
-            WHERE qst_number = :qstnum  AND
-            gameId = :gameid            AND
-            teamid = :teamid           AND
-            team_token = :token         AND
+            WHERE active = 1      AND     
+            qst_number = :qstnum  AND
+            gameId = :gameid      AND
+            teamid = :teamid      AND
+            team_token = :token   AND
             answer IS NOT NULL";
         
         $result = $db->prepare($sql);
