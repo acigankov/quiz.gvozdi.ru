@@ -535,11 +535,6 @@ function checkTeamAnswer($qstnum, $gameid, $teamid, $token) {
         return false;
 }
 
-//$qstid = $_GET['qstid'];
-//    $gameid = $_GET['gameid'];
-//    $teamid = $_GET['teamid'];
-//    $team_token = $_GET['tt'];  
-
 /**
  * Сохранить ответ команды по доп ссылки
  * @param int $qstid, int $gameid, int $teamid, string $team_token, int $answer

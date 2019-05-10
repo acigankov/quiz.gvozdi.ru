@@ -29,7 +29,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
         if (saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer)) {
 
-            $message = "Спасибо за ответ, команда №_$gameid . Ожидайте следующего письма.";
+            $message = "Спасибо за ответ, команда №_$teamid . Ожидайте следующего письма.";
             unset($_POST);
         } else {
 
