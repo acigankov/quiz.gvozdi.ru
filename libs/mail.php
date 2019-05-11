@@ -176,7 +176,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
                 . 'Кол-во игроков : ' . $gamers_qnt . ' <br>' . "\r\n"
                 . 'Телефон  : ' . $tel . ' <br>' . "\r\n"
                 . 'Email : ' . $email . ' <br>' . "\r\n"
-                . 'Ссылко : ' . $link_qst . ' <br>' . "\r\n";
+                . 'Ссылка : ' . '<a href="' . $link_qst . '">Клик</a>' . ' <br>' . "\r\n";
 
 // Для отправки HTML-письма должен быть установлен заголовок Content-type
         $headers = 'Content-type: text/html; charset=utf-8' . "\r\n" .

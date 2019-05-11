@@ -370,43 +370,43 @@
                 <div class="row">
                     <div class="foto-content w100 d-flex flex-wrap">
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/1.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/1.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/1.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/1.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/2.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/2.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/2.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/2.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/3.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/3.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/3.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/3.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/4.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/4.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/4.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/4.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/5.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/5.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/5.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/5.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/6.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/6.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/6.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/6.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/7.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/7.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/7.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/7.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                         <div class="foto-content__item">
-                            <a href="img/gallery/m29042019/8.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
-                                <img src="img/gallery/m29042019/8.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
+                            <a href="img/gallery/gp_06052019/8.jpg" data-fancybox="Фото ГарриПоттер #1.1" data-caption="Фото ГарриПоттер #1.1">
+                                <img src="img/gallery/gp_06052019/8.jpg" alt="Фото" title="Гвозди Паб" class="img-fluid">
                             </a>
                         </div>        
                     </div>
