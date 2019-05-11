@@ -189,6 +189,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
 
 
         if (mail($to, $subject, $message, $headers)) {
+            //если писмьо ушло себе, отправляем чуваку
             $to = $email;
             $subject = 'Гвоздатый Квиз. Регистрация на игру';
 
