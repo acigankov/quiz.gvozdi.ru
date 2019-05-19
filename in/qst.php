@@ -8,6 +8,10 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
     $teamid = $_GET['teamid'];
     $team_token = $_GET['tt'];
 
+    $gameName = getGameNameById($gameid);
+
+    $question = getQuestionByGameid($qstnum, $gameid);
+
     if (checkTeamRegistration($gameid, $teamid, $team_token)) {
         $link_validated = true;
     } else {
@@ -24,12 +28,12 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
 if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
     $answer = $_POST['answer'];
-    
+
     if (!checkTeamAnswer($qstnum, $gameid, $teamid, $team_token)) {
 
         if (saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer)) {
 
-            $message = "Спасибо за ответ, команда №_$teamid . Ожидайте следующего письма.";
+            $message = "Спасибо за ответ, команда $gameName ! Ожидайте следующего письма.";
             unset($_POST);
         } else {
 
@@ -109,16 +113,16 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                     <div class="top-heading w-100">
                         <div id="top-heading__slider" class="carousel slide h100 w-100" data-ride="carousel">
                             <div class="carousel-inner">
-                                
+
                                 <div class="carousel-item active" >
-                                        <div class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
-                                            <div class="top-heading__slider-text text-center">
-                                                <h1>гвоздатый <span>квиз</span></h1>
-                                            </div>
-                                            
+                                    <div class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
+                                        <div class="top-heading__slider-text text-center">
+                                            <h1>гвоздатый <span>квиз</span></h1>
                                         </div>
+
                                     </div>
-                                <?php if($games): ?>
+                                </div>
+                                <?php if ($games): ?>
                                     <?php foreach ($games as $game): ?>
                                         <div class="carousel-item" >
                                             <div style="background: url(../<?= $game['banner']; ?>) #222 center center / cover;" class="top-heading__wrapper position-relative w-100 h-100 d-flex align-items-center justify-content-center flex-column">
@@ -131,7 +135,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                                         . getMonthRus(date("n", strtotime($game['date'])))
                                                         . date(" Y", strtotime($game['date']));
                                                         ?></span>
-                                                    <span><?= getDayRus(date("w", strtotime($game['date'])));?></span>
+                                                    <span><?= getDayRus(date("w", strtotime($game['date']))); ?></span>
                                                     <div class="top-heading__text text-center text-uppercase">
                                                         <h1><?= $game['name']; ?></h1>
                                                     </div>
@@ -140,7 +144,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                         </div>
                                     <?php endforeach; ?>
                                 <?php endif ?>
-                                
+
                             </div>
                             <a class="carousel-control-prev" href="#top-heading__slider" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -176,32 +180,28 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
                             <?php elseif ($link_answered) : ?>
                                 <p>Ваша команда уже ответила на вопрос! </p>
+                                <p>Разгадайте ребус : </p>
                                 
-                                <form action="" method="POST" name="qst_form">
-                                    <div class="form-group col-md-4">
-                                        <label for="qst_form"><strong>Есть ли жизнь на марсе?</strong></label>
-                                        <select class="form-control" id="qst_form" name="answer">
-                                            <option value="0">Да</option>
-                                            <option value="1">Нет</option>
-                                            <option value="2">Я еще не определился</option>
-                                        </select>
-                                    </div>
-                                </form>
+                                <img src="../<?= $question['img']?>" alt="вопрос" width="50%" class="img-fluid">
+
+                                
 
                             <?php elseif ($link_validated && !$link_answered) : ?> 
-                                <p>Привет, команда такая то! Вы пришли сюда, чтобы отвтеить на серию дополнительных вопросов!</p>
+                                <p>Привет, <?= $gameName ?> такая то! Вы пришли сюда, чтобы отвтеить на серию дополнительных вопросов!</p>
                                 <p>У Вас есть только одна попытка ответа, поэтому не торопитесь, подумайте, можете 
                                     отправить ссылку данной страницы  другим участникам команды.
                                 </p>
+                                
+                                
+                                <p>Разгадайте ребус : </p>
+                                
+                                <img src="../<?= $question['img']?>" alt="вопрос" width="50%" class="img-fluid">
 
                                 <form action="" method="POST" name="qst_form">
                                     <div class="form-group col-md-4">
-                                        <label for="qst_form"><strong>Есть ли жизнь на марсе?</strong></label>
-                                        <select class="form-control" id="qst_form" name="answer">
-                                            <option value="0">Да</option>
-                                            <option value="1">Нет</option>
-                                            <option value="2">Я еще не определился</option>
-                                        </select>
+                                        <label for="qst_form">Введите ответ</label>
+                                        <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
+                                        <small id="emailHelp" class="form-text text-muted">У Вас есть только одна попытка ответа</small>
                                     </div>
                                     <button type="submit" name="qst_submit" class="btn btn-primary">Ответить</button>
                                 </form>

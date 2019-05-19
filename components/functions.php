@@ -512,9 +512,8 @@ function checkTeamAnswer($qstnum, $gameid, $teamid, $token) {
         $db = DB::getConnection();
 
         $sql = "SELECT *
-            FROM additional_question
-            WHERE active = 1      AND     
-            qst_number = :qstnum  AND
+            FROM additional_answers
+            WHERE qst_number = :qstnum  AND
             gameId = :gameid      AND
             teamid = :teamid      AND
             team_token = :token   AND
@@ -544,7 +543,7 @@ function saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer) {
     
     $db = DB::getConnection();
     
-    $sql = 'INSERT INTO additional_question (qst_number, gameid, teamid, team_token, answer) '
+    $sql = 'INSERT INTO additional_answers (qst_number, gameid, teamid, team_token, answer) '
             . 'VALUES (:qst_number, :gameid, :teamid, :team_token, :answer)';
     
     $result = $db->prepare($sql);
@@ -552,10 +551,39 @@ function saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer) {
     $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
     $result->bindParam(':teamid', $teamid, PDO::PARAM_INT);
     $result->bindParam(':team_token', $team_token, PDO::PARAM_STR);
-    $result->bindParam(':answer', $answer, PDO::PARAM_INT);
+    $result->bindParam(':answer', $answer, PDO::PARAM_STR);
     
     if($result->execute()) {
         return true;
+    }
+    return false;
+    
+}
+
+/**
+ * Получить вопрос по номеру и gameid
+ * @param int $qstnum, int $gameid
+ * @return bool
+ */
+function getQuestionByGameid($qstnum, $gameid) {
+    
+    $db = DB::getConnection();
+    
+    $sql = "SELECT * FROM additional_questions 
+            WHERE qst_number = :qstnum  AND 
+            gameid = :gameid            AND
+            active = 1 ";
+    
+    $result = $db->prepare($sql);
+    $result->bindParam(':qstnum', $qstnum, PDO::PARAM_INT);
+    $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+    
+    $qst = $result->fetch();
+    
+    if($qst) {
+        return $qst;
     }
     return false;
     

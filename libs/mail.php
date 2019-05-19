@@ -174,7 +174,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
                 . 'Команда : ' . $team . ' <br>' . "\r\n"
                 . 'Капитан : ' . $captain . ' <br>' . "\r\n"
                 . 'Кол-во игроков : ' . $gamers_qnt . ' <br>' . "\r\n"
-                . 'Телефон  : ' . $tel . ' <br>' . "\r\n"
+                . 'Телефон  : ' . $tel . '<br>' . "\r\n"
                 . 'Email : ' . $email . ' <br>' . "\r\n"
                 . 'Ссылка : ' . '<a href="' . $link_qst . '"> ' . $link_qst . '</a>' . ' <br>' . "\r\n";
 
@@ -185,7 +185,6 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
                 'From: noreply@gvozdimoscow.ru' . "\r\n" .
                 'Reply-To: noreply@gvozdimoscow.ru' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
-
 
 
         if (mail($to, $subject, $message, $headers)) {
