@@ -413,7 +413,7 @@
                 </div>
                 <div class="row bgr-yellow justify-content-end">
                     <div class="foto__link">
-                        <a href="https://vk.com/album-180891332_262718269" title="все фото" target="_blank">Больше фото <i class="fas fa-chevron-right"></i></a>
+                        <a href="https://vk.com/albums-180891332" title="все фото" target="_blank">Больше фото <i class="fas fa-chevron-right"></i></a>
                     </div>   
                 </div>
             </div>
