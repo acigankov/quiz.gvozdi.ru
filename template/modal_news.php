@@ -12,8 +12,8 @@
             </div>
             <div class="modal-body news-modal">
                 
-              <?= $news[0]['text']; ?>
-              
+            <?= $news[0]['text']; ?>
+            
             </div>    
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Я прочитал</button>

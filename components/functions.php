@@ -226,7 +226,7 @@ function getGameResults($id) {
             FROM teams as t
             LEFT JOIN games as g on t.gameId = g.id
             WHERE t.gameId = :id 
-            AND points > 0
+            AND position > 0
             ORDER BY position";
         
         $result = $db->prepare($sql);

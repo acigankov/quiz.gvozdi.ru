@@ -24,11 +24,11 @@ $data = [
 ];
 
 $limit = 3;
-$games = getGames($limit) ? getGames($limit) : [];
-$allGames = getAllGames() ? getAllGames() : [] ;
-$seasons = getSeason() ? getSeason() : [];
-$gameResults = getGameResults(6) ? getGameResults(6) : [];
-$news = getNews() ? getNews() : [];
+$games = getGames($limit);
+$allGames = getAllGames();
+$seasons = getSeason();
+$gameResults = getGameResults(3);
+$news = getNews();
 $gamesGP = getGamesBySeason(1);
 $gamesMarvel = getGamesBySeason(2);
 $gamesGOT = getGamesBySeason(3);
