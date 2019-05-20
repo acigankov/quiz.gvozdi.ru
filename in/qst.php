@@ -195,7 +195,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                 <form action="" method="POST" name="qst_form" class="py-5">
                                     <div class="form-group ">
                                         <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
-                                        <small id="emailHelp" class="form-text text-muted">У Вас есть только одна попытка ответа</small>
+                                        <small id="emailHelp" class="form-text text-muted">У Вас есть только одна попытка</small>
                                     </div>
                                     <button type="submit" name="qst_submit" class="btn btn-primary">Ответить</button>
                                 </form>
