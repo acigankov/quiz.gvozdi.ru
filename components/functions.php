@@ -572,7 +572,8 @@ function getQuestionByGameid($qstnum, $gameid) {
     $sql = "SELECT * FROM additional_questions 
             WHERE qst_number = :qstnum  AND 
             gameid = :gameid            AND
-            active = 1 ";
+            active = 1                  AND
+            expiry_date > now();";
     
     $result = $db->prepare($sql);
     $result->bindParam(':qstnum', $qstnum, PDO::PARAM_INT);

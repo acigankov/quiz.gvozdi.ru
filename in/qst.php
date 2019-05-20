@@ -11,6 +11,10 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
     $gameName = getGameNameById($gameid);
 
     $question = getQuestionByGameid($qstnum, $gameid);
+    
+    if(!$question) {
+        $link_expired = true;
+    }
 
     if (checkTeamRegistration($gameid, $teamid, $team_token)) {
         $link_validated = true;
@@ -175,25 +179,25 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <h3><?= $message ?></h3>
                         <?php else : ?>
 
-                            <?php if (!$link_validated) : ?>    
+                            <?php if (!$link_validated || $link_expired) : ?>    
                                 <p>Cсылка недействительна 🤷‍♂ </p>
 
                             <?php elseif ($link_answered) : ?>
                                 <p>Ваша команда уже ответила на вопрос! </p>
-                                <h3 class="py-3">Разгадайте ребус : </h3>
+                                <h3 class="py-5">Разгадайте ребус : </h3>
                                 
                                 <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
 
                                 
 
-                            <?php elseif ($link_validated && !$link_answered) : ?> 
+                            <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
                                 <p>Привет, <?= $gameName ?> такая то! Вы пришли сюда, чтобы отвтеить на серию дополнительных вопросов!</p>
                                 <p>У Вас есть только одна попытка ответа, поэтому не торопитесь, подумайте, можете 
                                     отправить ссылку данной страницы  другим участникам команды.
                                 </p>
                                 
                                 
-                                <h3 class="py-3">Разгадайте ребус : </h3>
+                                <h3 class="py-5">Разгадайте ребус : </h3>
                                 
                                 <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
 
