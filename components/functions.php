@@ -589,3 +589,56 @@ function getQuestionByGameid($qstnum, $gameid) {
     return false;
     
 }
+
+/**
+ * Подготовка данных для рассылки ссылок
+ * @param  int $gameid
+ * @return array or false
+ */
+function getTeamsForLink($gameid) {
+    
+    $db = DB::getConnection();
+    
+    $sql = "SELECT t.name as team, u.name, u.email, t.id, t.team_token, t.date_add FROM teams as t 
+            LEFT JOIN users as u ON t.captainID = u.id 
+            WHERE t.gameId = :gameid";
+    
+    $result = $db->prepare($sql);
+    $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+    
+    $data = $result->fetchAll();
+    
+    if($data) {
+        return $data;
+    }
+    return false;
+    
+}
+
+/**
+ * Достает игры из базы название по id
+ * @param int $id row game id
+ * @return string or false
+ */
+
+
+function getTeamNameById ($id) {
+    
+    if ($id) {
+
+        $db = DB::getConnection();
+        $sql = "SELECT name FROM teams WHERE id = :id";
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        $teamName = $result->fetchColumn();
+        
+        if($teamName){
+            return $teamName;
+        }
+    }
+    return false;
+}

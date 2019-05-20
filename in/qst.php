@@ -12,10 +12,8 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
 
     $question = getQuestionByGameid($qstnum, $gameid);
     
-    if(!$question) {
-        $link_expired = true;
-    }
-
+    $teamName = getTeamNameById($teamid);
+    
     if (checkTeamRegistration($gameid, $teamid, $team_token)) {
         $link_validated = true;
     } else {
@@ -31,7 +29,7 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
 
 if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
-    $answer = $_POST['answer'];
+    $answer = htmlspecialchars($_POST['answer']);
 
     if (!checkTeamAnswer($qstnum, $gameid, $teamid, $team_token)) {
 
@@ -185,22 +183,15 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <?php elseif ($link_answered) : ?>
                                 <p>Ваша команда уже ответила на вопрос! </p>
                                 <h3 class="py-5">Разгадайте ребус : </h3>
-                                
                                 <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
-
-                                
 
                             <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
-                                <p>Привет, <?= $gameName ?> такая то! Вы пришли сюда, чтобы отвтеить на серию дополнительных вопросов!</p>
-                                <p>У Вас есть только одна попытка ответа, поэтому не торопитесь, подумайте, можете 
-                                    отправить ссылку данной страницы  другим участникам команды.
+                                <p>Привет, <strong><?= $teamName ?></strong> ! Вы пришли сюда, чтобы ответить на серию дополнительных вопросов!</p>
+                                <p>У Вас есть только одна попытка , поэтому не торопитесь, подумайте, можете 
+                                    отправить ссылку другим участникам команды.
                                 </p>
-                                
-                                
                                 <h3 class="py-5">Разгадайте ребус : </h3>
-                                
                                 <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
-
                                 <form action="" method="POST" name="qst_form" class="py-5">
                                     <div class="form-group ">
                                         <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
