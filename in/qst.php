@@ -165,11 +165,11 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
             <div class="container bgr-yellow">
                 <div class="row">
                     <div class="section-title">
-                        <h2>Дополнительный вопрос</h2>
+                        <h2>Доп вопрос</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="qst__content w-100 h-100 p-3" style="min-height:30vh">
+                    <div class="qst__content w-100 h-100 p-3 text-center" style="min-height:30vh;max-width:500px;margin:0 auto;">
 
                         <?php if (isset($message)) : ?>
                             <h3><?= $message ?></h3>
@@ -180,9 +180,9 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
                             <?php elseif ($link_answered) : ?>
                                 <p>Ваша команда уже ответила на вопрос! </p>
-                                <p>Разгадайте ребус : </p>
+                                <h3 class="py-3">Разгадайте ребус : </h3>
                                 
-                                <img src="../<?= $question['img']?>" alt="вопрос" width="50%" class="img-fluid">
+                                <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
 
                                 
 
@@ -193,13 +193,12 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                 </p>
                                 
                                 
-                                <p>Разгадайте ребус : </p>
+                                <h3 class="py-3">Разгадайте ребус : </h3>
                                 
-                                <img src="../<?= $question['img']?>" alt="вопрос" width="50%" class="img-fluid">
+                                <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
 
-                                <form action="" method="POST" name="qst_form">
-                                    <div class="form-group col-md-4">
-                                        <label for="qst_form">Введите ответ</label>
+                                <form action="" method="POST" name="qst_form" class="py-5">
+                                    <div class="form-group ">
                                         <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
                                         <small id="emailHelp" class="form-text text-muted">У Вас есть только одна попытка ответа</small>
                                     </div>

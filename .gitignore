@@ -1,5 +1,6 @@
 # netbeans project files
 nbproject
+test
 
-indexOld.php
+config/db_params.php
 
