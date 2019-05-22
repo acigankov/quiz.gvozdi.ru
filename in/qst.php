@@ -180,7 +180,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <?php if (!$link_validated || $link_expired) : ?>    
                                 <p>Cсылка недействительна 🤷‍♂ </p>
 
-                            <?php elseif ($question['expiry_date'] > date()) : ?>
+                            <?php elseif (strtotime($question['expiry_date']) < strtotime('now')) : ?>
                                 
                                 <h3 class="py-5">Время истекло 🤷‍♂ </h3>
                                 
@@ -387,7 +387,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
             })(jQuery);
 
-            var deadline = '2019-05-22 23:59:59';
+            var deadline = '2019-05-24 23:59:59';
 
             $('.countdown').downCount({
                 date: deadline,
