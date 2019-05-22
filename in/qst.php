@@ -11,9 +11,9 @@ if (isset($_GET['qstnum']) && isset($_GET['gameid']) && isset($_GET['teamid']) &
     $gameName = getGameNameById($gameid);
 
     $question = getQuestionByGameid($qstnum, $gameid);
-    
+
     $teamName = getTeamNameById($teamid);
-    
+
     if (checkTeamRegistration($gameid, $teamid, $team_token)) {
         $link_validated = true;
     } else {
@@ -35,7 +35,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
         if (saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer)) {
 
-            $message = "Спасибо за ответ, команда $gameName ! Ожидайте следующего письма.";
+            $message = "Спасибо за ответ, команда $teamName ! Ожидайте следующего письма.";
             unset($_POST);
         } else {
 
@@ -166,8 +166,8 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
         <section class="qst">
             <div class="container bgr-yellow">
                 <div class="row">
-                    <div class="section-title">
-                        <h2>Доп вопрос</h2>
+                    <div class="section-title" style="min-height:80px;">
+                        <h2>Бонусный вопрос</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -180,18 +180,46 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <?php if (!$link_validated || $link_expired) : ?>    
                                 <p>Cсылка недействительна 🤷‍♂ </p>
 
+                            <?php elseif ($question['expiry_date'] > date()) : ?>
+                                
+                                <h3 class="py-5">Время истекло 🤷‍♂ </h3>
+                                
                             <?php elseif ($link_answered) : ?>
                                 <p>Ваша команда уже ответила на вопрос! </p>
                                 <h3 class="py-5">Разгадайте ребус : </h3>
-                                <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
+                                <img src="../<?= $question['img'] ?>" alt="вопрос" class="img-fluid">
 
                             <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
+
+                                <ul class="countdown" style="padding-bottom:2rem;">
+                                    <h3 class="py-3">Время на раздумье</h3>
+                                    <!--                                    <li>
+                                                                            <span class="days">00</span>
+                                                                            <div class="days_ref">дни</div>
+                                                                        </li>-->
+                                    <li class="seperator">.</li>
+                                    <li>
+                                        <span class="hours">00</span>
+                                        <div class="hours_ref">часы</div>
+                                    </li>
+                                    <li class="seperator">:</li>
+                                    <li>
+                                        <span class="minutes">00</span>
+                                        <div class="minutes_ref">мин</div>
+                                    </li>
+                                    <li class="seperator">:</li>
+                                    <li>
+                                        <span class="seconds">00</span>
+                                        <div class="seconds_ref">сек</div>
+                                    </li>
+                                </ul>
+
                                 <p>Привет, <strong><?= $teamName ?></strong> ! Вы пришли сюда, чтобы ответить на серию дополнительных вопросов!</p>
                                 <p>У Вас есть только одна попытка , поэтому не торопитесь, подумайте, можете 
                                     отправить ссылку другим участникам команды.
                                 </p>
                                 <h3 class="py-5">Разгадайте ребус : </h3>
-                                <img src="../<?= $question['img']?>" alt="вопрос" class="img-fluid">
+                                <img src="../<?= $question['img'] ?>" alt="вопрос" class="img-fluid py-3">
                                 <form action="" method="POST" name="qst_form" class="py-5">
                                     <div class="form-group ">
                                         <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
@@ -257,7 +285,116 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                 $(this).val('true');
             });
 
+            (function ($) {
 
+                $.fn.downCount = function (options, callback) {
+                    var settings = $.extend({
+                        date: null,
+                        offset: null
+                    }, options);
+
+                    // Throw error if date is not set
+                    if (!settings.date) {
+                        $.error('Date is not defined.');
+                    }
+
+                    // Throw error if date is set incorectly
+                    if (!Date.parse(settings.date)) {
+                        $.error('Incorrect date format, it should look like this, 12/24/2012 12:00:00.');
+                    }
+
+                    // Save container
+                    var container = this;
+
+                    /**
+                     * Change client's local date to match offset timezone
+                     * @return {Object} Fixed Date object.
+                     */
+                    var currentDate = function () {
+                        // get client's current date
+                        var date = new Date();
+
+                        // turn date to utc
+                        var utc = date.getTime() + (date.getTimezoneOffset());
+
+                        // set new Date object
+                        var new_date = new Date(utc + (3600000 * settings.offset))
+
+                        return new_date;
+                    };
+
+                    /**
+                     * Main downCount function that calculates everything
+                     */
+                    function countdown() {
+                        var target_date = new Date(settings.date), // set target date
+                                current_date = currentDate(); // get fixed current date
+
+                        // difference of dates
+                        var difference = target_date - current_date;
+
+                        // if difference is negative than it's pass the target date
+                        if (difference < 0) {
+                            // stop timer
+                            clearInterval(interval);
+
+                            if (callback && typeof callback === 'function')
+                                callback();
+
+                            return;
+                        }
+
+                        // basic math variables
+                        var _second = 1000,
+                                _minute = _second * 60,
+                                _hour = _minute * 60,
+                                _day = _hour * 24;
+
+                        // calculate dates
+                        var days = Math.floor(difference / _day),
+                                hours = Math.floor((difference % _day) / _hour),
+                                minutes = Math.floor((difference % _hour) / _minute),
+                                seconds = Math.floor((difference % _minute) / _second);
+
+                        // fix dates so that it will show two digets
+                        days = (String(days).length >= 2) ? days : '0' + days;
+                        hours = (String(hours).length >= 2) ? hours : '0' + hours;
+                        minutes = (String(minutes).length >= 2) ? minutes : '0' + minutes;
+                        seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
+
+                        // based on the date change the refrence wording
+                        var ref_days = (days === 1) ? 'дней' : 'дней',
+                                ref_hours = (hours === 1) ? 'часов' : 'часов',
+                                ref_minutes = (minutes === 1) ? 'минут' : 'минут',
+                                ref_seconds = (seconds === 1) ? 'секунд' : 'секунд';
+
+                        // set to DOM
+                        container.find('.days').text(days);
+                        container.find('.hours').text(hours);
+                        container.find('.minutes').text(minutes);
+                        container.find('.seconds').text(seconds);
+
+                        container.find('.days_ref').text(ref_days);
+                        container.find('.hours_ref').text(ref_hours);
+                        container.find('.minutes_ref').text(ref_minutes);
+                        container.find('.seconds_ref').text(ref_seconds);
+                    }
+                    ;
+
+                    // start
+                    var interval = setInterval(countdown, 1000);
+                };
+
+            })(jQuery);
+
+            var deadline = '2019-05-22 23:59:59';
+
+            $('.countdown').downCount({
+                date: deadline,
+            },
+                    function () {
+                        /* действие после завершения таймера */
+                    });
         </script>
     </body>
 </html>
