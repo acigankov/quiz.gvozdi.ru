@@ -222,7 +222,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                 <img src="../<?= $question['img'] ?>" alt="вопрос" class="img-fluid py-3">
                                 <form action="" method="POST" name="qst_form" class="py-5">
                                     <div class="form-group ">
-                                        <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ">
+                                        <input type="text" class="form-control" id="qst_form" name="answer" placeholder="Ваш ответ" required="required">
                                         <small id="emailHelp" class="form-text text-muted">У Вас есть только одна попытка</small>
                                     </div>
                                     <button type="submit" name="qst_submit" class="btn btn-primary">Ответить</button>
