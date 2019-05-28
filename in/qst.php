@@ -35,7 +35,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
         if (saveAnswer($qstnum, $gameid, $teamid, $team_token, $answer)) {
 
-            $message = "Спасибо за ответ, команда $teamName ! Ожидайте следующего письма.";
+            $message = "Спасибо за ответ, команда $teamName !";
             unset($_POST);
         } else {
 
@@ -177,7 +177,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <h3><?= $message ?></h3>
                         <?php else : ?>
 
-                            <?php if (!$link_validated || $link_expired) : ?>    
+                            <?php if (!$link_validated ) : ?>    
                                 <p>Cсылка недействительна 🤷‍♂ </p>
 
                             <?php elseif (strtotime($question['expiry_date']) < strtotime('now')) : ?>
@@ -214,7 +214,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                     </li>
                                 </ul>
 
-                                <p>Привет, <strong><?= $teamName ?></strong> ! Вы пришли сюда, чтобы ответить на серию дополнительных вопросов!</p>
+                                <p>Привет, <strong><?= $teamName ?></strong> ! Вы пришли сюда, чтобы ответить на дополнительный вопрос!</p>
                                 <p>У Вас есть только одна попытка , поэтому не торопитесь, подумайте, можете 
                                     отправить ссылку другим участникам команды.
                                 </p>
@@ -387,7 +387,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
             })(jQuery);
 
-            var deadline = '2019-05-24 23:59:59';
+            var deadline = '2019-06-01 23:59:59';
 
             $('.countdown').downCount({
                 date: deadline,
