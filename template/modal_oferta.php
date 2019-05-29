@@ -101,16 +101,8 @@
                 </p>
                 <p>Призовой фонд:</p>
                 <ul>
-                    <li>1&nbsp;место&nbsp;&mdash; 20&nbsp;000 рублей</li>
-                    <li>2&nbsp;место&nbsp;&mdash; 10&nbsp;000 рублей</li>
-                    <li>3&nbsp;место&nbsp;&mdash; 5&nbsp;000 рублей</li>
-                    <li>13&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>22&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>33&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>44&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>55&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>66&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
-                    <li>77&nbsp;место&nbsp;&mdash; 3&nbsp;000 рублей</li>
+                    <li> - Призовые выплаты зависят от числа команд, принимающих участие в игре и составляют до <strong>70 000</strong> рублей.</li> 
+                    <li> - Суммы выигрышей и призовые места объявляются непосредственно перед началом каждой игры</li>
                 </ul>
             </div>
             <div class="modal-footer">
