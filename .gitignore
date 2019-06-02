@@ -3,5 +3,6 @@ nbproject
 # test folder
 test
 
-config/db_params.php
+
+config
 
