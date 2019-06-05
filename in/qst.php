@@ -218,7 +218,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                 <p>У Вас есть только одна попытка , поэтому не торопитесь, подумайте, можете 
                                     отправить ссылку другим участникам команды.
                                 </p>
-                                <h3 class="py-5">Разгадайте ребус : </h3>
+                                <h3 class="py-5">Разгадайте : </h3>
                                 <img src="../<?= $question['img'] ?>" alt="вопрос" class="img-fluid py-3">
                                 <form action="" method="POST" name="qst_form" class="py-5">
                                     <div class="form-group ">
@@ -387,7 +387,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
             })(jQuery);
 
-            var deadline = '2019-06-01 23:59:59';
+            var deadline = '2019-06-06 23:59:59';
 
             $('.countdown').downCount({
                 date: deadline,
