@@ -618,7 +618,7 @@ function getTeamsForLink($gameid) {
 
 /**
  * Достает игры из базы название по id
- * @param int $id row game id
+ * @param int $id 
  * @return string or false
  */
 
@@ -639,5 +639,31 @@ function getTeamNameById ($id) {
             return $teamName;
         }
     }
+    return false;
+}
+
+
+/**
+ * Проверяет дубль команды при регистрации
+ * @param int $gameid , str $teamName
+ * @return bool
+ */
+
+function checkTeamNameRegistration ($teamName, $gameid) {
+
+        $db = DB::getConnection();
+        $sql = "SELECT name FROM teams WHERE name = :teamname AND gameid = :gameid ";
+        $result = $db->prepare($sql);
+        $result->bindParam(':teamname', $teamName, PDO::PARAM_STR);
+        $result->bindParam(':gameid', $gameid, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        
+        $res = $result->fetchColumn();
+        
+        if($res){
+            return $res;
+        }
+    
     return false;
 }
