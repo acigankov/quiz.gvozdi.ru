@@ -387,7 +387,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
             })(jQuery);
 
-            var deadline = '2019-06-15 23:59:59';
+            var deadline = '2019-06-19 23:59:59';
 
             $('.countdown').downCount({
                 date: deadline,
