@@ -86,7 +86,7 @@ function getSeason() {
 
 /**
  * Достает игры из базы 
- * @param int $limit row limt
+ * @param int $limit 
  * @return array or false
  */
 
@@ -110,7 +110,6 @@ function getGames($limit) {
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
             WHERE g.active = 1  
-            GROUP BY g.season_id 
             ORDER BY g.start_date LIMIT :limit";
         
         

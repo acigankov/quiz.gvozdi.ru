@@ -171,7 +171,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="qst__content w-100 h-100 p-3 text-center" style="min-height:30vh;max-width:500px;margin:0 auto;">
+                    <div class="qst__content w-100 h-100 p-3 text-center" style="min-height:30vh;max-width:800px;margin:0 auto;">
 
                         <?php if (isset($message)) : ?>
                             <h3><?= $message ?></h3>
@@ -192,26 +192,26 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
 
                                 <ul class="countdown" style="padding-bottom:2rem;">
-                                    <h3 class="py-3">Время на раздумье</h3>
-                                    <!--                                    <li>
-                                                                            <span class="days">00</span>
-                                                                            <div class="days_ref">дни</div>
-                                                                        </li>-->
-                                    <li class="seperator">.</li>
-                                    <li>
-                                        <span class="hours">00</span>
-                                        <div class="hours_ref">часы</div>
-                                    </li>
-                                    <li class="seperator">:</li>
-                                    <li>
-                                        <span class="minutes">00</span>
-                                        <div class="minutes_ref">мин</div>
-                                    </li>
-                                    <li class="seperator">:</li>
-                                    <li>
-                                        <span class="seconds">00</span>
-                                        <div class="seconds_ref">сек</div>
-                                    </li>
+                                    <h4 class="py-3">Время на раздумье до <?= date('02.07.2019 23:59:59') ?></h4>
+<!--                                        <li>
+                                            <span class="days">00</span>
+                                            <div class="days_ref">дни</div>
+                                        </li>
+                                        <li class="seperator">.</li>
+                                        <li>
+                                            <span class="hours">00</span>
+                                            <div class="hours_ref">часы</div>
+                                        </li>
+                                        <li class="seperator">:</li>
+                                        <li>
+                                            <span class="minutes">00</span>
+                                            <div class="minutes_ref">мин</div>
+                                        </li>
+                                        <li class="seperator">:</li>
+                                        <li>
+                                            <span class="seconds">00</span>
+                                            <div class="seconds_ref">сек</div>
+                                        </li>-->
                                 </ul>
 
                                 <p>Привет, <strong><?= $teamName ?></strong> ! Вы пришли сюда, чтобы ответить на дополнительный вопрос!</p>
@@ -318,7 +318,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                         var utc = date.getTime() + (date.getTimezoneOffset());
 
                         // set new Date object
-                        var new_date = new Date(utc + (3600000 * settings.offset))
+                        var new_date = new Date(utc + (3600000 * settings.offset));
 
                         return new_date;
                     };
@@ -387,10 +387,10 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
 
             })(jQuery);
 
-            var deadline = '2019-06-26 23:59:59';
+            var deadline = '2019-06-29 23:59:59';
 
             $('.countdown').downCount({
-                date: deadline,
+                date: deadline
             },
                     function () {
                         /* действие после завершения таймера */
