@@ -28,7 +28,7 @@
                             </div>
                             <input type="text" class="form-control check name_mask" name="reg_input_team" placeholder="Название Команды"  value="" minlength="3" required>
                             <div class="invalid-feedback">
-                                неверное или имя
+                                неверно заполнено поле
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                                 </div>
                                 <input type="text" class="form-control name_mask check" name="reg_input_name"  placeholder="Капитан команды"  value="" minlength="3" required>
                                 <div class="invalid-feedback">
-                                    неверное или короткое имя
+                                    неверно заполнено поле
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                 </div>
                                 <input type="text" class="form-control email_mask check" name="reg_input_email" placeholder="Email" required>
                                 <div class="invalid-feedback">
-                                    не верный email
+                                    неверный email
                                 </div>
                             </div>
                         </div>
