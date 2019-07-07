@@ -45,7 +45,7 @@ if (isset($_POST['form_call']) && !empty($_POST)) {
                     'Reply-To: noreply@gvozdimoscow.ru' . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
 
-            if (mail($to, $subject, $message, $headers)) {
+            if (mail($to, $subject, $message, $headers . '-f noreply@gvozdimoscow.ru')) {
                 unset($_POST);
             }
 
@@ -186,7 +186,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
                 'Reply-To: noreply@gvozdimoscow.ru' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
 
-        if (mail($to, $subject, $message, $headers)) {
+        if (mail($to, $subject, $message, $headers , '-f noreply@gvozdimoscow.ru')) {
             //если писмьо ушло себе, отправляем чуваку
             $to = $email;
             $subject = 'Гвоздатый Квиз. Регистрация на игру';
@@ -243,7 +243,7 @@ elseif (isset($_POST['form_reg']) && !empty($_POST)) {
             </html>
             ';
 
-            mail($to, $subject, $message, $headers);
+            mail($to, $subject, $message, $headers, '-f noreply@gvozdimoscow.ru');
             unset($_POST);
             $result = "Спасибо за регистрацию , капитан $captain , ждем твою команду на игру! Проверь почту :) " 
                     . "Если письмо не пришло или менеджер не перезвонил в течение суток, свяжитесь c нами по телефону "
