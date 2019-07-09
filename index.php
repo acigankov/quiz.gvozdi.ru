@@ -42,7 +42,6 @@
             <i class="fa fa-phone" aria-hidden="true"></i>
         </div>
         <a class="pulse d-block d-md-none" href="tel:+7(495)58-58-203"><i class="fa fa-phone" aria-hidden="true"></i></a>
-        
         <!--конец button CALL-->
         
         <!--header Start-->

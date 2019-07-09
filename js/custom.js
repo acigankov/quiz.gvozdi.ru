@@ -248,6 +248,8 @@ $(document).ready(function () {
 
     }
 
+
+    //тултип у звонилки
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -257,8 +259,9 @@ $(document).ready(function () {
             $(this).tooltip('show');
         });
     }
+    
+    
     //формирование данных формы
-
     let seasonId;
     let gameId;
     $('.timetable-item__btn , .gamestable-content__btn').click(function () {
