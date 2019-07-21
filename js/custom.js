@@ -115,6 +115,7 @@ $(document).ready(function () {
             $('#reg_input_gamers_qnt[type=range]').attr('min' , '2');
             $('#reg_input_gamers_qnt[type=range]').val('2');
             $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
+            
         }
 
     });
@@ -278,6 +279,14 @@ $(document).ready(function () {
             $('input').removeClass('is-valid is-invalid');
             $('form').trigger('reset');
             $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
+            //показываем ползунок        
+            $('#reg_input_gamers_qnt').removeClass('d-none');
+            //оказываем инпут с названием команды
+            $('.input-group-team').removeClass('d-none');
+            //возвращаем значеиня по - умолчанию
+            $('#reg_input_gamers_qnt[type=range]').attr('min', '2');
+            $('#reg_input_gamers_qnt[type=range]').val('2');
+            $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
         });
 
     }
@@ -345,6 +354,14 @@ $(document).ready(function () {
     $('#modal_call , #modal_reg').on('hidden.bs.modal', function () {
         $('input').removeClass('is-valid is-invalid');
         $('form').trigger('reset');
+        $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
+        //показываем ползунок        
+        $('#reg_input_gamers_qnt').removeClass('d-none');
+        //оказываем инпут с названием команды
+        $('.input-group-team').removeClass('d-none');
+        //возвращаем значеиня по - умолчанию
+        $('#reg_input_gamers_qnt[type=range]').attr('min', '2');
+        $('#reg_input_gamers_qnt[type=range]').val('2');
         $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
     });
 
