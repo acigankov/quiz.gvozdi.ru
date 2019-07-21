@@ -22,7 +22,7 @@
                         </div>
                     </div> 
                     <div class="col mb-3">
-                        <div class="input-group">
+                        <div class="input-group input-group-team">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-users"></i></span>
                             </div>
@@ -35,7 +35,15 @@
                     <div class="col mb-3">
                         <div class="input-group">
                             <label for="reg_input_gamers_qnt" id="reg_input_gamers_qnt_text"></label>
-                            <input type="range" class="custom-range check" name="reg_input_gamers_qnt" id="reg_input_gamers_qnt" min="2" max="10"  step="1" value="2">
+                            <input type="range" class="custom-range check" name="reg_input_gamers_qnt" id="reg_input_gamers_qnt" min="2" max="10"  step="1" value="2" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="reg_input_check_gamers">
+                            <label class="form-check-label" for="reg_input_check_gamers">
+                                Я один. Найдите мне команду.
+                            </label>
                         </div>
                     </div>
                     <div class="form-row">

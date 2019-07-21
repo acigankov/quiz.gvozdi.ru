@@ -79,7 +79,7 @@ $(document).ready(function () {
         
     //формы 
     
-    //штзге range
+    //input range
     var range_qnt = $('#reg_input_gamers_qnt');
     var range_qnt_text = $('#reg_input_gamers_qnt_text');
     range_qnt_text.text('Количество игроков : ' + range_qnt.val());
@@ -87,6 +87,37 @@ $(document).ready(function () {
         range_qnt_text.text('Количество игроков : ' + range_qnt.val());
     });
     
+    //тогглер для чекбокса
+    
+        (function ($) {
+        $.fn.toggleDisabled = function () {
+            return this.each(function () {
+                this.disabled = !this.disabled;
+            });
+        };
+    })(jQuery);
+    
+    var timestamp = new Date().getUTCMilliseconds();
+
+    $('#reg_input_check_gamers').on('change', function () {
+        //убираем/показываем ползунок        
+        $('#reg_input_gamers_qnt').toggleClass('d-none');
+        //убираем/показываем инпут с названием команды
+        $('.input-group-team').toggleClass('d-none');
+        //если чекбокс отмечен
+        if (($(this)).is(':checked')) {
+            $('#reg_input_gamers_qnt[type=range]').attr('min' , '1');
+            $('#reg_input_gamers_qnt[type=range]').val('1');
+            $('.check[name=reg_input_team]').val('Легионер_' + timestamp);
+            $('#reg_input_gamers_qnt_text').text('Количество игроков : 1');
+        } else {
+            $('.check[name=reg_input_team]').val('');
+            $('#reg_input_gamers_qnt[type=range]').attr('min' , '2');
+            $('#reg_input_gamers_qnt[type=range]').val('2');
+            $('#reg_input_gamers_qnt_text').text('Количество игроков : 2');
+        }
+
+    });
    
     //вспомогательные функции для валидация полей.    
     function validateName(selector) {
@@ -207,8 +238,10 @@ $(document).ready(function () {
 
                     } else {
                         event.preventDefault();
+                        $('#form-register button[type=submit]').attr('disabled', 'disabled').text('Ожидание...');
                         var result_ = $('.result_');
                         sendAjaxForm(result_, $(form));
+                        
                     }
                     //form.classList.add('was-validated');
 
@@ -230,6 +263,7 @@ $(document).ready(function () {
                 form.css({'display': 'none'});
                 result_.removeClass('d-none');
                 result_.text(result);
+                $('#form-register button[type=submit]').removeAttr('disabled').text('Отправить');
             },
             error: function (response) { // Данные не отправлены
                 form.css({'display': 'none'});
