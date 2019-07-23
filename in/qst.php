@@ -192,7 +192,7 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                             <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
 
                                 <ul class="countdown" style="padding-bottom:2rem;">
-                                    <h4 class="py-3">Время на раздумье до <?= date('18.07.2019 23:59:59') ?></h4>
+                                    <h4 class="py-3">Время на раздумье до <?= date('24.07.2019 23:59:59') ?></h4>
 <!--                                        <li>
                                             <span class="days">00</span>
                                             <div class="days_ref">дни</div>
