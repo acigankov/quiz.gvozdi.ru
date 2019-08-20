@@ -58,9 +58,6 @@ function getShortDayRus($day) {
 }
 
 
-
-
-
 /**
  * Достает сезоны из базы 
  * @param null
@@ -665,4 +662,25 @@ function checkTeamNameRegistration ($teamName, $gameid) {
         }
     
     return false;
+}
+
+/**
+ * Задание для крона, меняет активные игры
+ * @param null
+ * @return bool
+ */
+
+function setGameActiveNot() {
+    
+    $db = DB::getConnection();
+    
+    $sql = 'UPDATE games SET active = 0 WHERE start_date < now() AND active = 1';
+    
+    $result = $db->prepare($sql);
+       
+    if($result->execute()) {
+        return true;
+    }
+    return false;
+    
 }
