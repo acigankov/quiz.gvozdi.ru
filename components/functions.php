@@ -1,6 +1,17 @@
 <?php
 
 /**
+ * дебуг вывод массивов
+ * @param array
+ */
+function arrPrint($arr) {
+    echo '<pre>';
+    print_r($arr);
+    echo '<pre>';
+}
+
+
+/**
  * Переводит месяц на русский язык
  * @param int $month номер месяца
  * @return array or false
@@ -106,9 +117,8 @@ function getGames($limit) {
             l.adress
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
-            WHERE g.active = 1  
+            WHERE g.active = 1  AND g.start_date >= NOW()
             ORDER BY g.start_date LIMIT :limit";
-        
         
         
         $result = $db->prepare($sql);
@@ -146,7 +156,7 @@ function getAllGames() {
             l.adress
             FROM games g  
             LEFT JOIN location l on l.id = g.locationID 
-            WHERE g.active = 1  
+            WHERE g.active = 1  AND g.start_date >= NOW() 
             ORDER BY g.start_date";
         
         $result = $db->prepare($sql);
@@ -244,8 +254,6 @@ function getGameResults($id) {
  * @param int $id row game id
  * @return string or false
  */
-
-
 function getGameNameById ($id) {
     
     if ($id) {
@@ -613,11 +621,10 @@ function getTeamsForLink($gameid) {
 }
 
 /**
- * Достает игры из базы название по id
+ * Достает команду из базы название по id
  * @param int $id 
  * @return string or false
  */
-
 
 function getTeamNameById ($id) {
     
@@ -684,3 +691,42 @@ function setGameActiveNot() {
     return false;
     
 }
+
+
+/**
+ * Генерит отчет по доп ответам. Выборка по играм за текущий день.
+ * @param NULL
+ * @return string or false
+ */
+function getRepAnswers() {
+    
+        $db = DB::getConnection();
+        
+        $sql = "SELECT 	g.name as game , 
+		DATE(g.start_date) as game_date, 
+		t.name as team, 
+		u.name as captain, 
+		u.email as email, 
+		aa.qst_number as qst_number, 
+		aa.answer as answer,
+		aa.date_add as answer_date
+                FROM additional_answers as aa 
+                LEFT JOIN games as g ON g.id = aa.gameid 
+                LEFT JOIN teams as t ON t.id = aa.teamid 
+                LEFT JOIN users as u ON u.id = t.captainID 
+                WHERE aa.gameid in (SELECT id FROM games WHERE TO_DAYS(start_date) = TO_DAYS(now())) 
+                order by t.name ";
+
+
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        $repData = $result->fetchAll();
+        
+        if($repData){
+            return $repData;
+        }
+    
+    return false;
+}
+

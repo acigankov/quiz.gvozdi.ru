@@ -16,7 +16,7 @@ if ($_GET['param_token'] == 'asdaq2e1ddsda451Ezs22') {
             'Reply-To: noreply@gvozdimoscow.ru' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
-    mail($to, $subject, $message, $headers . '-f noreply@gvozdimoscow.ru');
+    mail($to, $subject, $message, $headers, '-f noreply@gvozdimoscow.ru');
 } 
 
 exit;

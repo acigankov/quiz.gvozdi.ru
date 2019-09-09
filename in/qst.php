@@ -190,9 +190,9 @@ if (isset($_POST['qst_submit']) && $_POST['qst_submit'] === 'true') {
                                 <img src="../<?= $question['img'] ?>" alt="вопрос" class="img-fluid">
 
                             <?php elseif ($link_validated && !$link_answered && !$link_expired) : ?> 
-
+                                
                                 <ul class="countdown" style="padding-bottom:2rem;">
-                                    <h4 class="py-3">Время на раздумье до <?= date('21.08.2019 23:59:59') ?></h4>
+                                    <h4 class="py-3">Время на раздумье до <?= date('d.m.Y H:i' , strtotime($question['expiry_date'])) ?></h4>
 <!--                                        <li>
                                             <span class="days">00</span>
                                             <div class="days_ref">дни</div>
